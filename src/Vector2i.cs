@@ -1,11 +1,9 @@
 ﻿using System;
 
-public class Vector2i
+public struct Vector2i
 {
 	public int x;
 	public int y;
-
-	public Vector2i() { }
 
 	public Vector2i(int x, int y)
 	{
@@ -54,25 +52,6 @@ public class Vector2i
 	public double magnitude
 	{
 		get { return Math.Sqrt(x * x + y * y); }
-	}
-
-	public override bool Equals(System.Object obj)
-	{
-		// If parameter is null return false.
-		if (obj == null)
-		{
-			return false;
-		}
-
-		// If parameter cannot be cast to Point return false.
-		Vector2i p = obj as Vector2i;
-		if ((System.Object)p == null)
-		{
-			return false;
-		}
-
-		// Return true if the fields match:
-		return (x == p.x) && (y == p.y);
 	}
 
 	public bool Equals(Vector2i p)

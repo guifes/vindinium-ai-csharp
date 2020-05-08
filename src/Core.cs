@@ -44,8 +44,7 @@ class Core : IPathfinder<Vector2i, Vector2i>
             Hero hero = heroes[heroCount++];
 
             hero.id = id;
-            hero.x = x;
-            hero.y = y;
+            hero.pos = new Vector2i(x, y);
             hero.life = life;
             hero.gold = gold;
 
@@ -56,7 +55,7 @@ class Core : IPathfinder<Vector2i, Vector2i>
 
                 foreach (Tavern tavern in taverns)
                 {
-                    List<Vector2i> path = pathfinder.getShortestPath(new Vector2i(myHero.x, myHero.y), new Vector2i(tavern.x, tavern.y));
+                    List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, tavern.pos);
                     tavern.myHeroDistance = path.Count - 1;
 
                     if (nearestTavern == null || tavern.myHeroDistance < nearestTavern.myHeroDistance)
@@ -67,7 +66,7 @@ class Core : IPathfinder<Vector2i, Vector2i>
             }
             else
             {
-                List<Vector2i> path = pathfinder.getShortestPath(new Vector2i(myHero.x, myHero.y), new Vector2i(hero.x, hero.y));
+                List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, hero.pos);
                 hero.myHeroDistance = path.Count - 1;
             }
         }
@@ -76,10 +75,9 @@ class Core : IPathfinder<Vector2i, Vector2i>
             Mine mine = mines[mineCount++];
 
             mine.id = id;
-            mine.x = x;
-            mine.y = y;
+            mine.pos = new Vector2i(x, y);
 
-            List<Vector2i> path = pathfinder.getShortestPath(new Vector2i(myHero.x, myHero.y), new Vector2i(mine.x, mine.y));
+            List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, mine.pos);
             mine.myHeroDistance = path.Count - 1;
 
             if (
@@ -123,7 +121,7 @@ class Core : IPathfinder<Vector2i, Vector2i>
             )
         )
         {
-            return "MOVE " + nearestTavern.x + " " + nearestTavern.y;
+            return "MOVE " + nearestTavern.pos.x + " " + nearestTavern.pos.y;
         }
         else
         {
@@ -135,12 +133,12 @@ class Core : IPathfinder<Vector2i, Vector2i>
                 }
                 else
                 {
-                    return "MOVE " + nearestTavern.x + " " + nearestTavern.y;
+                    return "MOVE " + nearestTavern.pos.x + " " + nearestTavern.pos.y;
                 }
             }
             else
             {
-                return "MOVE " + nearestUnclaimedMine.x + " " + nearestUnclaimedMine.y;
+                return "MOVE " + nearestUnclaimedMine.pos.x + " " + nearestUnclaimedMine.pos.y;
             }
         }
     }

@@ -1,26 +1,22 @@
 ﻿class Hero
 {
     public int id;
-    public int x;
-    public int y;
+    public Vector2i pos;
     public int life;
     public int gold;
     public int myHeroDistance;
-    public int spawnX;
-    public int spawnY;
+    public Vector2i spawn;
 }
 
 class Mine
 {
     public int id;
-    public int x;
-    public int y;
+    public Vector2i pos;
     public int myHeroDistance;
 }
 
 class Tavern
 {
-    public int x;
-    public int y;
+    public Vector2i pos;
     public int myHeroDistance;
 }

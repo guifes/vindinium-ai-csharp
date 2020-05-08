@@ -29,8 +29,7 @@ class Player
                     case '3':
                     {
                         Hero hero = new Hero();
-                        hero.spawnX = j;
-                        hero.spawnY = i;
+                        hero.spawn = new Vector2i(j, i);
 
                         core.heroes.Add(hero);
                         break;
@@ -38,8 +37,7 @@ class Player
                     case 'T':
                     {
                         Tavern tavern = new Tavern();
-                        tavern.y = i;
-                        tavern.x = j;
+                        tavern.pos = new Vector2i(j, i);
 
                         core.taverns.Add(tavern);
                         break;
