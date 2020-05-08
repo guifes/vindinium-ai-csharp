@@ -1,20 +1,12 @@
-/// UnityUtils https://github.com/mortennobel/UnityUtils
-/// By Morten Nobel-Jørgensen
-/// License lgpl 3.0 (http://www.gnu.org/licenses/lgpl-3.0.txt)
-
 using System.Collections.Generic;
 
-/// <summary>
-/// Based on http://blogs.msdn.com/b/ericlippert/archive/2007/10/08/path-finding-using-a-in-c-3-0-part-three.aspx
-/// Backported to C# 2.0
-/// </summary>
 public class PriorityQueue<P, V>
 {
 	private SortedDictionary<P, LinkedList<V>> list;
 
 	public PriorityQueue(IComparer<P> comparer = null)
 	{
-		if(comparer != null)
+		if (comparer != null)
 		{
 			list = new SortedDictionary<P, LinkedList<V>>(comparer);
 		}
@@ -41,21 +33,21 @@ public class PriorityQueue<P, V>
 	{
 		// will throw exception if there isn’t any first element!
 		SortedDictionary<P, LinkedList<V>>.KeyCollection.Enumerator enumerator = list.Keys.GetEnumerator();
-		
+
 		enumerator.MoveNext();
-		
+
 		P key = enumerator.Current;
-		
+
 		LinkedList<V> v = list[key];
-		
+
 		V res = v.First.Value;
 		v.RemoveFirst();
-		
-		if(v.Count == 0) // nothing left of the top priority.
-		{ 
+
+		if (v.Count == 0) // nothing left of the top priority.
+		{
 			list.Remove(key);
 		}
-		
+
 		return res;
 	}
 
@@ -73,8 +65,8 @@ public class PriorityQueue<P, V>
 		V res = v.First.Value;
 		v.RemoveFirst();
 
-		if(v.Count == 0) // nothing left of the top priority.
-		{ 
+		if (v.Count == 0) // nothing left of the top priority.
+		{
 			list.Remove(key);
 		}
 
@@ -88,14 +80,14 @@ public class PriorityQueue<P, V>
 		LinkedList<V> v = list[oldPriority];
 		v.Remove(value);
 
-		if(v.Count == 0) // nothing left of the top priority.
-		{ 
+		if (v.Count == 0) // nothing left of the top priority.
+		{
 			list.Remove(oldPriority);
 		}
 
 		Enqueue(value, newPriority);
 	}
-	
+
 	public bool IsEmpty
 	{
 		get
@@ -103,7 +95,7 @@ public class PriorityQueue<P, V>
 			return list.Count == 0;
 		}
 	}
-	
+
 	public override string ToString()
 	{
 		string res = "";

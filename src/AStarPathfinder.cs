@@ -8,7 +8,7 @@ class AStarNode<State, Transition>
 	public Transition transition;
 	public float g; // cost
 	public float f; // estimate
-	
+
 	public AStarNode(AStarNode<State, Transition> parent, float g, float f, State state, Transition transition)
 	{
 		this.parent = parent;
@@ -17,7 +17,7 @@ class AStarNode<State, Transition>
 		this.state = state;
 		this.transition = transition;
 	}
-	
+
 	public override string ToString()
 	{
 		return "Node {f:" + f + ", g:" + g + ", h:" + H + ", state: " + state + " transition: " + transition + "}";
@@ -29,23 +29,6 @@ class AStarNode<State, Transition>
 		{
 			return f - g;
 		}
-	}
-}
-
-class AStarMovementNode<State, Transition>
-{
-	public State state;
-	public int steps;
-	
-	public AStarMovementNode(int steps, State state)
-	{
-		this.steps = steps;
-		this.state = state;
-	}
-	
-	public override string ToString()
-	{
-		return "Node {steps:" + steps + ", state: " + state + "}";
 	}
 }
 
@@ -80,12 +63,12 @@ public class AStarPathfinder<State, Transition>
 		openList.Enqueue(startNode, 0);
 		openListDictionary.Add(fromState, startNode); // Insert the node in the open list
 
-		while(!openList.IsEmpty)
+		while (!openList.IsEmpty)
 		{
 			AStarNode<State, Transition> node = openList.Dequeue(); // Get lowest score node from open list
 			openListDictionary.Remove(node.state);
 
-			if(bestNode == null || bestNode.H > node.H)
+			if (bestNode == null || bestNode.H > node.H)
 			{
 				bestNode = node;
 			}
@@ -97,7 +80,7 @@ public class AStarPathfinder<State, Transition>
 
 			closedSet.Add(node.state); // Add this node to the closed set
 
-			foreach (Transition transition in map.Expand(node.state)) // For every node reachable from this node (transitions)
+			foreach (Transition transition in map.Expand(node.state, toState)) // For every node reachable from this node (transitions)
 			{
 				State child = map.ApplyTransition(node.state, transition); // Get following state
 
@@ -111,7 +94,7 @@ public class AStarPathfinder<State, Transition>
 					openList.Enqueue(searchNode, searchNode.f);
 					openListDictionary.Add(searchNode.state, searchNode);
 				}
-				else if(isNodeInFrontier) // Replaces node score if it's lower
+				else if (isNodeInFrontier) // Replaces node score if it's lower
 				{
 					AStarNode<State, Transition> searchNode = CreateSearchNode(node, transition, child, toState);
 
@@ -122,8 +105,8 @@ public class AStarPathfinder<State, Transition>
 				}
 			}
 		}
-		
-		if(collision)
+
+		if (collision)
 		{
 			return BuildSolution(bestNode);
 		}
@@ -131,64 +114,19 @@ public class AStarPathfinder<State, Transition>
 		return null;
 	}
 
-	public HashSet<State> getMovementRange(State fromState, int movementRange, bool debug = false)
-	{
-		PriorityQueue<int, AStarMovementNode<State, Transition>> openList = new PriorityQueue<int, AStarMovementNode<State, Transition>>(new DescendingComparer<int>());
-		Dictionary<State, AStarMovementNode<State, Transition>> openListDictionary = new Dictionary<State, AStarMovementNode<State, Transition>>();
-		HashSet<State> closedSet = new HashSet<State>();
-		
-		AStarMovementNode<State, Transition> startNode = new AStarMovementNode<State, Transition>(map.StepsForState(fromState, movementRange), fromState);
-		
-		openList.Enqueue(startNode, 0);
-		openListDictionary.Add(fromState, startNode); // Insert the node in the open list
-		
-		while(!openList.IsEmpty)
-		{
-			AStarMovementNode<State, Transition> node = openList.Dequeue();
-			openListDictionary.Remove(node.state);
-			
-			closedSet.Add(node.state); // Add this node to the closed set
-			
-			foreach (Transition transition in map.ExpandMovement(node.state, node.steps)) // For every node reachable from this node (transitions)
-			{
-				State child = map.ApplyTransition(node.state, transition); // Get following state
-				
-				AStarMovementNode<State, Transition> openListNode = null;
-				bool isNodeInFrontier = openListDictionary.TryGetValue(child, out openListNode); // Gets node for state if it was already in the open list
-
-				AStarMovementNode<State, Transition> searchNode = new AStarMovementNode<State, Transition>(map.StepsForState(child, node.steps) - 1, child);
-
-				if (!closedSet.Contains(child) && !isNodeInFrontier) // If following state isn't in the frontier
-				{
-					openList.Enqueue(searchNode, searchNode.steps);
-					openListDictionary.Add(searchNode.state, searchNode);
-				}
-				else if(isNodeInFrontier)
-				{
-					if (searchNode.steps > openListNode.steps)
-					{
-						openList.Replace(openListNode, openListNode.steps, searchNode.steps);
-					}
-				}
-			}
-		}
-
-		return closedSet;
-	}
-
 	private AStarNode<State, Transition> CreateSearchNode(AStarNode<State, Transition> node, Transition transition, State child, State toState)
 	{
-		if(node != null)
+		if (node != null)
 		{
-			float cost = map.PathCost(node.state, transition);
+			float cost = (float)map.PathCost(node.state, transition);
 			float heuristic = map.Heuristic(child, toState);
-			
+
 			return new AStarNode<State, Transition>(node, node.g + cost, node.g + cost + heuristic, child, transition);
 		}
 		else
 		{
 			float heuristic = map.Heuristic(child, toState);
-			
+
 			return new AStarNode<State, Transition>(node, 0, heuristic, child, transition);
 		}
 	}
@@ -197,7 +135,7 @@ public class AStarPathfinder<State, Transition>
 	{
 		List<Transition> list = new List<Transition>();
 
-		while(searchNode != null)
+		while (searchNode != null)
 		{
 			if ((searchNode.transition != null) && (!searchNode.transition.Equals(default(Transition))))
 			{

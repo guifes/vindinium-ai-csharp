@@ -1,49 +1,49 @@
-﻿using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Collections;
+using System;
 using System.Collections.Generic;
+
+
 
 public class Vector2i
 {
 	public int x;
 	public int y;
-	
-	public Vector2i(){}
-	
-	public Vector2i(int x,int y)
+
+	public Vector2i() { }
+
+	public Vector2i(int x, int y)
 	{
 		this.x = x;
 		this.y = y;
 	}
-	
-	public static Vector2i operator +(Vector2i c1,Vector2i c2)
+
+	public static Vector2i operator +(Vector2i c1, Vector2i c2)
 	{
-		return new Vector2i(c1.x+c2.x, c1.y+c2.y);
+		return new Vector2i(c1.x + c2.x, c1.y + c2.y);
 	}
-	
-	public static Vector2i operator -(Vector2i c1,Vector2i c2)
+
+	public static Vector2i operator -(Vector2i c1, Vector2i c2)
 	{
-		return new Vector2i(c1.x-c2.x, c1.y-c2.y);
+		return new Vector2i(c1.x - c2.x, c1.y - c2.y);
 	}
-	
-	public static Vector2i operator *(Vector2i c1,int c2)
+
+	public static Vector2i operator *(Vector2i c1, int c2)
 	{
-		return new Vector2i(c1.x*c2, c1.y*c2);
+		return new Vector2i(c1.x * c2, c1.y * c2);
 	}
-	
-	public static Vector2i operator *(int c1,Vector2i c2)
+
+	public static Vector2i operator *(int c1, Vector2i c2)
 	{
-		return new Vector2i(c1*c2.x, c1*c2.y);
+		return new Vector2i(c1 * c2.x, c1 * c2.y);
 	}
-	
+
 	// allow callers to initialize
 	public int this[int idx]
 	{
-		get { return idx==0?x:y; }
-		set { 
-			switch (idx){
+		get { return idx == 0 ? x : y; }
+		set
+		{
+			switch (idx)
+			{
 				case 0:
 					x = value;
 					break;
@@ -53,12 +53,12 @@ public class Vector2i
 			}
 		}
 	}
-	
+
 	public double magnitude
 	{
-		get { return Math.Sqrt(x*x+y*y);}
+		get { return Math.Sqrt(x * x + y * y); }
 	}
-	
+
 	public override bool Equals(System.Object obj)
 	{
 		// If parameter is null return false.
@@ -66,18 +66,18 @@ public class Vector2i
 		{
 			return false;
 		}
-		
+
 		// If parameter cannot be cast to Point return false.
 		Vector2i p = obj as Vector2i;
 		if ((System.Object)p == null)
 		{
 			return false;
 		}
-		
+
 		// Return true if the fields match:
 		return (x == p.x) && (y == p.y);
 	}
-	
+
 	public bool Equals(Vector2i p)
 	{
 		// If parameter is null return false:
@@ -85,11 +85,11 @@ public class Vector2i
 		{
 			return false;
 		}
-		
+
 		// Return true if the fields match:
 		return (x == p.x) && (y == p.y);
 	}
-	
+
 	public static bool operator ==(Vector2i a, Vector2i b)
 	{
 		// If both are null, or both are same instance, return true.
@@ -97,31 +97,34 @@ public class Vector2i
 		{
 			return true;
 		}
-		
+
 		// If one is null, but not both, return false.
 		if (((object)a == null) || ((object)b == null))
 		{
 			return false;
 		}
-		
+
 		// Return true if the fields match:
 		return a.x == b.x && a.y == b.y;
 	}
-	
+
 	public static bool operator !=(Vector2i a, Vector2i b)
 	{
 		return !(a == b);
 	}
-	
+
 	public override int GetHashCode()
 	{
 		return x ^ y;
 	}
-	
-	public override string ToString() {
-		return "Vector2i {"+x+", "+y+"}";
+
+	public override string ToString()
+	{
+		return "Vector2i {" + x + ", " + y + "}";
 	}
 }
+
+
 
 public class PriorityQueue<P, V>
 {
@@ -129,7 +132,7 @@ public class PriorityQueue<P, V>
 
 	public PriorityQueue(IComparer<P> comparer = null)
 	{
-		if(comparer != null)
+		if (comparer != null)
 		{
 			list = new SortedDictionary<P, LinkedList<V>>(comparer);
 		}
@@ -156,21 +159,21 @@ public class PriorityQueue<P, V>
 	{
 		// will throw exception if there isn’t any first element!
 		SortedDictionary<P, LinkedList<V>>.KeyCollection.Enumerator enumerator = list.Keys.GetEnumerator();
-		
+
 		enumerator.MoveNext();
-		
+
 		P key = enumerator.Current;
-		
+
 		LinkedList<V> v = list[key];
-		
+
 		V res = v.First.Value;
 		v.RemoveFirst();
-		
-		if(v.Count == 0) // nothing left of the top priority.
-		{ 
+
+		if (v.Count == 0) // nothing left of the top priority.
+		{
 			list.Remove(key);
 		}
-		
+
 		return res;
 	}
 
@@ -188,8 +191,8 @@ public class PriorityQueue<P, V>
 		V res = v.First.Value;
 		v.RemoveFirst();
 
-		if(v.Count == 0) // nothing left of the top priority.
-		{ 
+		if (v.Count == 0) // nothing left of the top priority.
+		{
 			list.Remove(key);
 		}
 
@@ -203,14 +206,14 @@ public class PriorityQueue<P, V>
 		LinkedList<V> v = list[oldPriority];
 		v.Remove(value);
 
-		if(v.Count == 0) // nothing left of the top priority.
-		{ 
+		if (v.Count == 0) // nothing left of the top priority.
+		{
 			list.Remove(oldPriority);
 		}
 
 		Enqueue(value, newPriority);
 	}
-	
+
 	public bool IsEmpty
 	{
 		get
@@ -218,7 +221,7 @@ public class PriorityQueue<P, V>
 			return list.Count == 0;
 		}
 	}
-	
+
 	public override string ToString()
 	{
 		string res = "";
@@ -235,13 +238,18 @@ public class PriorityQueue<P, V>
 	}
 }
 
+
+
 public interface IPathfinder<State, Transition>
 {
 	float Heuristic(State fromLocation, State toLocation);
 	List<Transition> Expand(State position, State toState);
 	double PathCost(State fromLocation, Transition transition);
-    State ApplyTransition(State location, Transition transition);
+	State ApplyTransition(State location, Transition transition);
 }
+
+
+
 
 class AStarNode<State, Transition>
 {
@@ -250,7 +258,7 @@ class AStarNode<State, Transition>
 	public Transition transition;
 	public float g; // cost
 	public float f; // estimate
-	
+
 	public AStarNode(AStarNode<State, Transition> parent, float g, float f, State state, Transition transition)
 	{
 		this.parent = parent;
@@ -259,7 +267,7 @@ class AStarNode<State, Transition>
 		this.state = state;
 		this.transition = transition;
 	}
-	
+
 	public override string ToString()
 	{
 		return "Node {f:" + f + ", g:" + g + ", h:" + H + ", state: " + state + " transition: " + transition + "}";
@@ -305,12 +313,12 @@ public class AStarPathfinder<State, Transition>
 		openList.Enqueue(startNode, 0);
 		openListDictionary.Add(fromState, startNode); // Insert the node in the open list
 
-		while(!openList.IsEmpty)
+		while (!openList.IsEmpty)
 		{
 			AStarNode<State, Transition> node = openList.Dequeue(); // Get lowest score node from open list
 			openListDictionary.Remove(node.state);
 
-			if(bestNode == null || bestNode.H > node.H)
+			if (bestNode == null || bestNode.H > node.H)
 			{
 				bestNode = node;
 			}
@@ -336,7 +344,7 @@ public class AStarPathfinder<State, Transition>
 					openList.Enqueue(searchNode, searchNode.f);
 					openListDictionary.Add(searchNode.state, searchNode);
 				}
-				else if(isNodeInFrontier) // Replaces node score if it's lower
+				else if (isNodeInFrontier) // Replaces node score if it's lower
 				{
 					AStarNode<State, Transition> searchNode = CreateSearchNode(node, transition, child, toState);
 
@@ -347,8 +355,8 @@ public class AStarPathfinder<State, Transition>
 				}
 			}
 		}
-		
-		if(collision)
+
+		if (collision)
 		{
 			return BuildSolution(bestNode);
 		}
@@ -358,17 +366,17 @@ public class AStarPathfinder<State, Transition>
 
 	private AStarNode<State, Transition> CreateSearchNode(AStarNode<State, Transition> node, Transition transition, State child, State toState)
 	{
-		if(node != null)
+		if (node != null)
 		{
 			float cost = (float)map.PathCost(node.state, transition);
 			float heuristic = map.Heuristic(child, toState);
-			
+
 			return new AStarNode<State, Transition>(node, node.g + cost, node.g + cost + heuristic, child, transition);
 		}
 		else
 		{
 			float heuristic = map.Heuristic(child, toState);
-			
+
 			return new AStarNode<State, Transition>(node, 0, heuristic, child, transition);
 		}
 	}
@@ -377,7 +385,7 @@ public class AStarPathfinder<State, Transition>
 	{
 		List<Transition> list = new List<Transition>();
 
-		while(searchNode != null)
+		while (searchNode != null)
 		{
 			if ((searchNode.transition != null) && (!searchNode.transition.Equals(default(Transition))))
 			{
@@ -417,6 +425,198 @@ class Tavern
     public int y;
     public int myHeroDistance;
 }
+
+
+
+
+class Core : IPathfinder<Vector2i, Vector2i>
+{
+    AStarPathfinder<Vector2i, Vector2i> pathfinder;
+    public Hero myHero = null;
+    public List<Hero> heroes = new List<Hero>();
+    public List<Mine> mines = new List<Mine>();
+    public List<Tavern> taverns = new List<Tavern>();
+    public List<List<bool>> map = new List<List<bool>>();
+    public Tavern nearestTavern;
+    public Mine nearestUnclaimedMine;
+    public int size;
+    public int myId;
+
+    private int heroCount = 0;
+    private int mineCount = 0;
+
+    List<Vector2i> transitions = new List<Vector2i>(4);
+
+    public Core()
+    {
+        pathfinder = new AStarPathfinder<Vector2i, Vector2i>(this);
+
+        transitions.Add(new Vector2i(1, 0));
+        transitions.Add(new Vector2i(0, 1));
+        transitions.Add(new Vector2i(-1, 0));
+        transitions.Add(new Vector2i(0, -1));
+    }
+
+    public void StartTurn()
+    {
+        heroCount = 0;
+        mineCount = 0;
+        nearestTavern = null;
+        nearestUnclaimedMine = null;
+    }
+
+    public void UpdateEntity(string entityType, int id, int x, int y, int life, int gold)
+    {
+        if (entityType == "HERO")
+        {
+            Hero hero = heroes[heroCount++];
+
+            hero.id = id;
+            hero.x = x;
+            hero.y = y;
+            hero.life = life;
+            hero.gold = gold;
+
+            if (hero.id == myId)
+            {
+                myHero = hero;
+                hero.myHeroDistance = -1;
+
+                foreach (Tavern tavern in taverns)
+                {
+                    List<Vector2i> path = pathfinder.getShortestPath(new Vector2i(myHero.x, myHero.y), new Vector2i(tavern.x, tavern.y));
+                    tavern.myHeroDistance = path.Count - 1;
+
+                    if (nearestTavern == null || tavern.myHeroDistance < nearestTavern.myHeroDistance)
+                    {
+                        nearestTavern = tavern;
+                    }
+                }
+            }
+            else
+            {
+                List<Vector2i> path = pathfinder.getShortestPath(new Vector2i(myHero.x, myHero.y), new Vector2i(hero.x, hero.y));
+                hero.myHeroDistance = path.Count - 1;
+            }
+        }
+        else if (entityType == "MINE")
+        {
+            Mine mine = mines[mineCount++];
+
+            mine.id = id;
+            mine.x = x;
+            mine.y = y;
+
+            List<Vector2i> path = pathfinder.getShortestPath(new Vector2i(myHero.x, myHero.y), new Vector2i(mine.x, mine.y));
+            mine.myHeroDistance = path.Count - 1;
+
+            if (
+                mine.id != myId &&
+                (
+                    nearestUnclaimedMine == null ||
+                    mine.myHeroDistance < nearestUnclaimedMine.myHeroDistance
+                )
+            )
+            {
+                nearestUnclaimedMine = mine;
+            }
+        }
+    }
+
+    public string GetAction()
+    {
+        // (X) Go to nearest tavern if all mines claimed and heal when life <= 75
+        // (X) Next to tavern and need healing, heal
+        // ( ) Avoid nearby enemies when they can kill me
+        // ( ) Avoid enemies near taverns
+        // ( ) Avoid stepping into another player's spawn if this player can die in his next turn (life < 20 * nearby enemies)
+        // (X) If needs healing, seek tavern
+        // ( ) Kill nearby enemies with at least 1 mine
+        // ( ) Chase enemies with more than 1/4 of mines
+
+        if (
+            myHero.gold >= 2 &&
+            (
+                (
+                    myHero.life <= 20
+                ) ||
+                (
+                    nearestTavern.myHeroDistance == 0 &&
+                    myHero.life <= 75
+                ) ||
+                (
+                    nearestUnclaimedMine != null &&
+                    myHero.life - nearestUnclaimedMine.myHeroDistance <= 20
+                )
+            )
+        )
+        {
+            return "MOVE " + nearestTavern.x + " " + nearestTavern.y;
+        }
+        else
+        {
+            if (nearestUnclaimedMine == null)
+            {
+                if (nearestTavern.myHeroDistance == 0)
+                {
+                    return "WAIT";
+                }
+                else
+                {
+                    return "MOVE " + nearestTavern.x + " " + nearestTavern.y;
+                }
+            }
+            else
+            {
+                return "MOVE " + nearestUnclaimedMine.x + " " + nearestUnclaimedMine.y;
+            }
+        }
+    }
+
+    public float Heuristic(Vector2i fromLocation, Vector2i toLocation)
+    {
+        Vector2i res = fromLocation - toLocation;
+        return Math.Abs(res.x) + Math.Abs(res.y); // manhatten-distance
+    }
+
+    public List<Vector2i> Expand(Vector2i state, Vector2i toState)
+    {
+        List<Vector2i> res = new List<Vector2i>();
+
+        foreach (Vector2i transition in transitions)
+        {
+            Vector2i newState = ApplyTransition(state, transition);
+
+            if (
+                (newState.x >= 0) &&
+                (newState.y >= 0) &&
+                (newState.x < size) &&
+                (newState.y < size) &&
+                (
+                    newState.Equals(toState) || map[newState.y][newState.x]
+                )
+            )
+            {
+                res.Add(transition);
+            }
+        }
+
+        return res;
+    }
+
+    public double PathCost(Vector2i fromLocation, Vector2i transition)
+    {
+        return transition.magnitude;
+    }
+
+    public Vector2i ApplyTransition(Vector2i state, Vector2i transition)
+    {
+        return state + transition;
+    }
+}
+
+
+
 
 class Player
 {
@@ -492,196 +692,7 @@ class Player
                 core.UpdateEntity(entityType, id, x, y, life, gold);
             }
 
-            // Write an action using Console.WriteLine()
-            // To debug: Console.Error.WriteLine("Debug messages...");
-
             Console.WriteLine(core.GetAction());
         }
-    }
-}
-
-class Core : IPathfinder<Vector2i, Vector2i>
-{
-    AStarPathfinder<Vector2i, Vector2i> pathfinder;
-    public Hero myHero = null;
-    public List<Hero> heroes = new List<Hero>();
-    public List<Mine> mines = new List<Mine>();
-    public List<Tavern> taverns = new List<Tavern>();
-    public List<List<bool>> map = new List<List<bool>>();
-    public Tavern nearestTavern;
-    public Mine nearestUnclaimedMine;
-    public int size;
-    public int myId;
-    
-    private int heroCount = 0;
-    private int mineCount = 0;
-
-    List<Vector2i> transitions = new List<Vector2i>(4);
-
-    public Core()
-    {
-        pathfinder = new AStarPathfinder<Vector2i, Vector2i>(this);
-
-        transitions.Add(new Vector2i(1, 0));
-        transitions.Add(new Vector2i(0, 1));
-        transitions.Add(new Vector2i(-1, 0));
-        transitions.Add(new Vector2i(0, -1));
-    }
-
-    public void StartTurn()
-    {
-        heroCount = 0;
-        mineCount = 0;
-        nearestTavern = null;
-        nearestUnclaimedMine = null;
-    }
-
-    public void UpdateEntity(string entityType, int id, int x, int y, int life, int gold)
-    {
-        if(entityType == "HERO")
-        {
-            Hero hero = heroes[heroCount++];
-
-            hero.id = id;
-            hero.x = x;
-            hero.y = y;
-            hero.life = life;
-            hero.gold = gold;
-            
-            if(hero.id == myId)
-            {
-                myHero = hero;
-                hero.myHeroDistance = -1;
-
-                foreach(Tavern tavern in taverns)
-                {
-                    List<Vector2i> path = pathfinder.getShortestPath(new Vector2i(myHero.x, myHero.y), new Vector2i(tavern.x, tavern.y));
-                    tavern.myHeroDistance = path.Count - 1;
-
-                    if(nearestTavern == null || tavern.myHeroDistance < nearestTavern.myHeroDistance)
-                    {
-                        nearestTavern = tavern;
-                    }
-                }
-            }
-            else
-            {
-                List<Vector2i> path = pathfinder.getShortestPath(new Vector2i(myHero.x, myHero.y), new Vector2i(hero.x, hero.y));
-                hero.myHeroDistance = path.Count - 1;
-            }
-        }
-        else if(entityType == "MINE")
-        {
-            Mine mine = mines[mineCount++];
-
-            mine.id = id;
-            mine.x = x;
-            mine.y = y;
-
-            List<Vector2i> path = pathfinder.getShortestPath(new Vector2i(myHero.x, myHero.y), new Vector2i(mine.x, mine.y));
-            mine.myHeroDistance = path.Count - 1;
-            
-            if(
-                mine.id != myId &&
-                (
-                    nearestUnclaimedMine == null ||
-                    mine.myHeroDistance < nearestUnclaimedMine.myHeroDistance
-                )
-            )
-            {
-                nearestUnclaimedMine = mine;
-            }
-        }
-    }
-
-    public string GetAction()
-    {
-        // (X) Go to nearest tavern if all mines claimed and heal when life <= 75
-        // (X) Next to tavern and need healing, heal
-        // ( ) Avoid nearby enemies when they can kill me
-        // ( ) Avoid enemies near taverns
-        // ( ) Avoid stepping into another player's spawn if this player can die in his next turn (life < 20 * nearby enemies)
-        // (X) If needs healing, seek tavern
-        // ( ) Kill nearby enemies with at least 1 mine
-        // ( ) Chase enemies with more than 1/4 of mines
-
-        if(
-            myHero.gold >= 2 &&
-            (
-                (
-                    myHero.life <= 20
-                ) ||
-                (
-                    nearestTavern.myHeroDistance == 0 &&
-                    myHero.life <= 75
-                ) ||
-                (
-                    nearestUnclaimedMine != null &&
-                    myHero.life - nearestUnclaimedMine.myHeroDistance <= 20
-                )
-            )
-        )
-        {
-            return "MOVE " + nearestTavern.x + " " + nearestTavern.y;
-        }
-        else
-        {
-            if(nearestUnclaimedMine == null)
-            {
-                if(nearestTavern.myHeroDistance == 0)
-                {
-                    return "WAIT";
-                }
-                else
-                {
-                    return "MOVE " + nearestTavern.x + " " + nearestTavern.y;   
-                }
-            }
-            else
-            {
-                return "MOVE " + nearestUnclaimedMine.x + " " + nearestUnclaimedMine.y;
-            }
-        }
-    }
-
-    public float Heuristic(Vector2i fromLocation, Vector2i toLocation)
-    {
-        Vector2i res = fromLocation - toLocation;
-        return Math.Abs(res.x) + Math.Abs(res.y); // manhatten-distance
-    }
-    
-    public List<Vector2i> Expand(Vector2i state, Vector2i toState)
-    {
-        List<Vector2i> res = new List<Vector2i>();
-        
-        foreach(Vector2i transition in transitions)
-        {
-            Vector2i newState = ApplyTransition(state, transition);
-
-            if(
-                (newState.x >= 0) &&
-                (newState.y >= 0) &&
-                (newState.x < size) &&
-                (newState.y < size) &&
-                (
-                    newState.Equals(toState) || map[newState.y][newState.x]
-                )
-            )
-            {
-                res.Add(transition);
-            }
-        }
-        
-        return res;
-    }
-    
-    public double PathCost(Vector2i fromLocation, Vector2i transition)
-    {
-        return transition.magnitude;
-    }
-    
-    public Vector2i ApplyTransition(Vector2i state, Vector2i transition)
-    {
-        return state + transition;
     }
 }
