@@ -74,7 +74,7 @@ class Test
                             hero.pos = new Vector2i(mx, my);
                             hero.spawn = new Vector2i(mx, my);
 
-                            state.heroes.Add(hero);
+                            state.heroes[0] = hero;
                             state.map[my].Add(true);
 
                             break;
@@ -88,7 +88,7 @@ class Test
                             hero.pos = new Vector2i(mx, my);
                             hero.spawn = new Vector2i(mx, my);
 
-                            state.heroes.Add(hero);
+                            state.heroes[1] = hero;
                             state.map[my].Add(true);
 
                             break;
@@ -102,7 +102,7 @@ class Test
                             hero.pos = new Vector2i(mx, my);
                             hero.spawn = new Vector2i(mx, my);
 
-                            state.heroes.Add(hero);
+                            state.heroes[2] = hero;
                             state.map[my].Add(true);
 
                             break;
@@ -116,7 +116,7 @@ class Test
                             hero.pos = new Vector2i(mx, my);
                             hero.spawn = new Vector2i(mx, my);
 
-                            state.heroes.Add(hero);
+                            state.heroes[3] = hero;
                             state.map[my].Add(true);
 
                             break;

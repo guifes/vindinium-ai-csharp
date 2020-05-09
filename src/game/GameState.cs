@@ -32,6 +32,11 @@ public class GameState : IPathfinder<Vector2i, Vector2i>
         this.transitions.Add(new Vector2i(-1, 0));
         this.transitions.Add(new Vector2i(0, -1));
 
+        this.heroes.Add(null);
+        this.heroes.Add(null);
+        this.heroes.Add(null);
+        this.heroes.Add(null);
+
         this.pathfinder = new AStarPathfinder<Vector2i, Vector2i>(this);
     }
 
@@ -54,7 +59,10 @@ public class GameState : IPathfinder<Vector2i, Vector2i>
                 (newState.y >= 0) &&
                 (newState.x < size) &&
                 (newState.y < size) &&
-                map[newState.y][newState.x]
+                (
+                    map[newState.y][newState.x] ||
+                    newState == toState
+                )
             )
             {
                 res.Add(transition);
