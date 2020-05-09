@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-class Test
+class Game
 {
     static GameState state;
     static List<ConsoleColor> colors;

@@ -9,6 +9,7 @@ class Core : IPathfinder<Vector2i, Vector2i>
     public List<Mine> mines = new List<Mine>();
     public List<Tavern> taverns = new List<Tavern>();
     public List<List<bool>> map = new List<List<bool>>();
+    public Dictionary<Vector2i, int> distanceToHero;
     public Tavern nearestTavern;
     public Mine nearestUnclaimedMine;
     public int size;
@@ -51,7 +52,6 @@ class Core : IPathfinder<Vector2i, Vector2i>
             if (hero.id == myId)
             {
                 myHero = hero;
-                hero.myHeroDistance = -1;
             }
         }
         else if (entityType == "MINE")
@@ -72,7 +72,7 @@ class Core : IPathfinder<Vector2i, Vector2i>
                 if (hero.id == myHero.id) continue;
 
                 List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, hero.pos);
-                hero.myHeroDistance = path.Count - 1;
+                distanceToHero[hero.pos] = path.Count - 1;
             }
         }
 
@@ -81,9 +81,9 @@ class Core : IPathfinder<Vector2i, Vector2i>
             foreach (Tavern tavern in taverns)
             {
                 List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, tavern.pos);
-                tavern.myHeroDistance = path.Count - 1;
+                distanceToHero[tavern.pos] = path.Count - 1;
 
-                if (nearestTavern == null || tavern.myHeroDistance < nearestTavern.myHeroDistance)
+                if (nearestTavern == null || distanceToHero[tavern.pos] < distanceToHero[nearestTavern.pos])
                 {
                     nearestTavern = tavern;
                 }
@@ -95,13 +95,13 @@ class Core : IPathfinder<Vector2i, Vector2i>
             foreach (Mine mine in mines)
             {
                 List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, mine.pos);
-                mine.myHeroDistance = path.Count - 1;
+                distanceToHero[mine.pos] = path.Count - 1;
 
                 if (
                     mine.id != myId &&
                     (
                         nearestUnclaimedMine == null ||
-                        mine.myHeroDistance < nearestUnclaimedMine.myHeroDistance
+                        distanceToHero[mine.pos]< distanceToHero[nearestUnclaimedMine.pos]
                     )
                 )
                 {
@@ -129,12 +129,12 @@ class Core : IPathfinder<Vector2i, Vector2i>
                     myHero.life <= 20
                 ) ||
                 (
-                    nearestTavern.myHeroDistance == 0 &&
+                    distanceToHero[nearestTavern.pos] == 0 &&
                     myHero.life <= 75
                 ) ||
                 (
                     nearestUnclaimedMine != null &&
-                    myHero.life - nearestUnclaimedMine.myHeroDistance <= 20
+                    myHero.life - distanceToHero[nearestUnclaimedMine.pos] <= 20
                 )
             )
         )
@@ -145,7 +145,7 @@ class Core : IPathfinder<Vector2i, Vector2i>
         {
             if (nearestUnclaimedMine == null)
             {
-                if (nearestTavern.myHeroDistance == 0)
+                if (distanceToHero[nearestTavern.pos] == 0)
                 {
                     return "WAIT";
                 }
