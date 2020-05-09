@@ -1,7 +1,6 @@
 ﻿const gulp = require('gulp');
 const concat = require('gulp-concat');
 const header = require('gulp-header');
-const data = require('gulp-data');
 const modify = require('gulp-modify-file');
 
 const headers = [];
@@ -12,6 +11,7 @@ function unique(value, index, self) {
 
 gulp.task('compile', function () {
     return gulp.src([
+        './src/*.cs',
         './src/common/**/*.cs',
         './src/bot/**/*.cs'
     ])
