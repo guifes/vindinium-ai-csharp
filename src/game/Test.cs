@@ -12,10 +12,10 @@ class Test
     {
         List<IInput> inputs = new List<IInput>();
 
-        inputs.Add(new IdleBot());
-        inputs.Add(new IdleBot());
         inputs.Add(new Player());
-        inputs.Add(new IdleBot());
+        inputs.Add(new Player());
+        inputs.Add(new Player());
+        inputs.Add(new Player());
 
         colors = new List<ConsoleColor>();
 
@@ -157,6 +157,8 @@ class Test
             IInput input = inputs[i];
             input.Start(size, map, i);
         }
+
+        PrintState();
 
         for (state.round = 0; state.round < state.maxRound; state.round++)
         {
@@ -327,6 +329,13 @@ class Test
         }
 
         Console.Write('\n');
+        Console.WriteLine("Round: " + state.round);
+        Console.WriteLine("(Hero 1) Life: " + state.heroes[0].life + " Gold: " + state.heroes[0].gold);
+        Console.WriteLine("(Hero 2) Life: " + state.heroes[1].life + " Gold: " + state.heroes[1].gold);
+        Console.WriteLine("(Hero 3) Life: " + state.heroes[2].life + " Gold: " + state.heroes[2].gold);
+        Console.WriteLine("(Hero 4) Life: " + state.heroes[3].life + " Gold: " + state.heroes[3].gold);
+        Console.Write('\n');
+        Console.ReadLine();
     }
 
     static void MoveHero(Hero hero, int x, int y)
