@@ -111,7 +111,7 @@ public class AStarPathfinder<State, Transition>
 			return BuildSolution(bestNode);
 		}
 
-		return null;
+		return new List<Transition>();
 	}
 
 	private AStarNode<State, Transition> CreateSearchNode(AStarNode<State, Transition> node, Transition transition, State child, State toState)

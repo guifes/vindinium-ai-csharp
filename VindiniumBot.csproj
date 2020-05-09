@@ -7,5 +7,23 @@
 
   <ItemGroup>
     <Compile Remove="build\Build.cs" />
+    <Compile Remove="src\bot\Entry.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\bot\" />
+    <Folder Include="src\game\" />
+    <Folder Include="maps\" />
+    <Folder Include="src\common\" />
+    <Folder Include="src\common\model\" />
+    <Folder Include="src\common\pathfinding\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="maps\map0.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="maps\map0.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\bot\Entry.cs" />
   </ItemGroup>
 </Project>

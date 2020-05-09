@@ -54,6 +54,11 @@ public struct Vector2i
 		get { return Math.Sqrt(x * x + y * y); }
 	}
 
+    public int size
+    {
+		get { return Math.Abs(x) + Math.Abs(y); }
+    }
+
 	public bool Equals(Vector2i p)
 	{
 		// If parameter is null return false:
@@ -96,6 +101,6 @@ public struct Vector2i
 
 	public override string ToString()
 	{
-		return "Vector2i {" + x + ", " + y + "}";
+		return "{" + x + ", " + y + "}";
 	}
 }

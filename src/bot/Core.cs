@@ -52,22 +52,6 @@ class Core : IPathfinder<Vector2i, Vector2i>
             {
                 myHero = hero;
                 hero.myHeroDistance = -1;
-
-                foreach (Tavern tavern in taverns)
-                {
-                    List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, tavern.pos);
-                    tavern.myHeroDistance = path.Count - 1;
-
-                    if (nearestTavern == null || tavern.myHeroDistance < nearestTavern.myHeroDistance)
-                    {
-                        nearestTavern = tavern;
-                    }
-                }
-            }
-            else
-            {
-                List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, hero.pos);
-                hero.myHeroDistance = path.Count - 1;
             }
         }
         else if (entityType == "MINE")
@@ -76,19 +60,53 @@ class Core : IPathfinder<Vector2i, Vector2i>
 
             mine.id = id;
             mine.pos = new Vector2i(x, y);
+        }
+    }
 
-            List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, mine.pos);
-            mine.myHeroDistance = path.Count - 1;
-
-            if (
-                mine.id != myId &&
-                (
-                    nearestUnclaimedMine == null ||
-                    mine.myHeroDistance < nearestUnclaimedMine.myHeroDistance
-                )
-            )
+    public void Process()
+    {
+        // Processing heroes
+        {
+            foreach(Hero hero in heroes)
             {
-                nearestUnclaimedMine = mine;
+                if (hero.id == myHero.id) continue;
+
+                List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, hero.pos);
+                hero.myHeroDistance = path.Count - 1;
+            }
+        }
+
+        // Processing taverns
+        {
+            foreach (Tavern tavern in taverns)
+            {
+                List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, tavern.pos);
+                tavern.myHeroDistance = path.Count - 1;
+
+                if (nearestTavern == null || tavern.myHeroDistance < nearestTavern.myHeroDistance)
+                {
+                    nearestTavern = tavern;
+                }
+            }
+        }
+
+        // Processing mines
+        {
+            foreach (Mine mine in mines)
+            {
+                List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, mine.pos);
+                mine.myHeroDistance = path.Count - 1;
+
+                if (
+                    mine.id != myId &&
+                    (
+                        nearestUnclaimedMine == null ||
+                        mine.myHeroDistance < nearestUnclaimedMine.myHeroDistance
+                    )
+                )
+                {
+                    nearestUnclaimedMine = mine;
+                }
             }
         }
     }
