@@ -4,11 +4,11 @@ using System.Collections.Generic;
 class Core : IPathfinder<Vector2i, Vector2i>
 {
     AStarPathfinder<Vector2i, Vector2i> pathfinder;
-    public Hero myHero = null;
-    public List<Hero> heroes = new List<Hero>();
-    public List<Mine> mines = new List<Mine>();
-    public List<Tavern> taverns = new List<Tavern>();
-    public List<List<bool>> map = new List<List<bool>>();
+    public Hero myHero;
+    public List<Hero> heroes;
+    public List<Mine> mines;
+    public List<Tavern> taverns;
+    public List<List<bool>> map;
     public Dictionary<Vector2i, int> distanceToHero;
     public Tavern nearestTavern;
     public Mine nearestUnclaimedMine;
@@ -23,11 +23,17 @@ class Core : IPathfinder<Vector2i, Vector2i>
     public Core()
     {
         pathfinder = new AStarPathfinder<Vector2i, Vector2i>(this);
+        heroes = new List<Hero>();
+        mines = new List<Mine>();
+        taverns = new List<Tavern>();
+        map = new List<List<bool>>();
 
         transitions.Add(new Vector2i(1, 0));
         transitions.Add(new Vector2i(0, 1));
         transitions.Add(new Vector2i(-1, 0));
         transitions.Add(new Vector2i(0, -1));
+
+        distanceToHero = new Dictionary<Vector2i, int>();
     }
 
     public void StartTurn()
@@ -36,6 +42,8 @@ class Core : IPathfinder<Vector2i, Vector2i>
         mineCount = 0;
         nearestTavern = null;
         nearestUnclaimedMine = null;
+
+        distanceToHero.Clear();
     }
 
     public void UpdateEntity(string entityType, int id, int x, int y, int life, int gold)
