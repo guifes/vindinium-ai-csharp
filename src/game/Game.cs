@@ -287,12 +287,28 @@ class Game
 
                 if (printed) continue;
 
+                foreach (Hero hero in state.heroes)
+                {
+                    if (hero.spawn.Equals(pos))
+                    {
+                        Console.ForegroundColor = colors[hero.id];
+                        Console.Write("O");
+                        Console.ResetColor();
+                        printed = true;
+                        break;
+                    }
+                }
+
+                if (printed) continue;
+
                 foreach(Mine mine in state.mines)
                 {
                     if(mine.pos.Equals(pos))
                     {
                         if (mine.id >= 0)
-                            Console.BackgroundColor = colors[mine.id];
+                            Console.ForegroundColor = colors[mine.id];
+                        else
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
 
                         Console.Write('M');
                         Console.ResetColor();
@@ -307,7 +323,9 @@ class Game
                 {
                     if (tavern.pos.Equals(pos))
                     {
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
                         Console.Write('T');
+                        Console.ResetColor();
                         printed = true;
                         break;
                     }
@@ -317,7 +335,7 @@ class Game
 
                 if(state.map[y][x])
                 {
-                    Console.Write('.');
+                    Console.Write(' ');
                 }
                 else
                 {
@@ -330,11 +348,28 @@ class Game
 
         Console.Write('\n');
         Console.WriteLine("Round: " + state.round);
-        Console.WriteLine("(Hero 1) Life: " + state.heroes[0].life + " Gold: " + state.heroes[0].gold);
-        Console.WriteLine("(Hero 2) Life: " + state.heroes[1].life + " Gold: " + state.heroes[1].gold);
-        Console.WriteLine("(Hero 3) Life: " + state.heroes[2].life + " Gold: " + state.heroes[2].gold);
-        Console.WriteLine("(Hero 4) Life: " + state.heroes[3].life + " Gold: " + state.heroes[3].gold);
+
+        foreach(Hero hero in state.heroes)
+        {
+            int mines = 0;
+
+            foreach (Mine mine in state.mines)
+                if (mine.id == hero.id)
+                    mines++;
+
+            Console.BackgroundColor = colors[hero.id];
+            Console.Write(" ");
+            Console.ResetColor();
+            Console.Write(" ");
+
+            Console.Write("(Hero " + hero.id + ") ");
+            Console.Write("Life: " + hero.life + " ");
+            Console.Write("Gold: " + hero.gold + " ");
+            Console.WriteLine("Mines: " + mines);
+        }
+        
         Console.Write('\n');
+
         Console.ReadLine();
     }
 
