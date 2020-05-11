@@ -3749,6 +3749,22 @@
     <None Remove="node_modules\es5-ext\string\#\%40%40iterator\shim.js" />
     <None Remove="node_modules\es5-ext\string\#\%40%40iterator\implement.js" />
     <None Remove="package-lock.json" />
+    <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\is-implemented.js" />
+    <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\index.js" />
+    <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\shim.js" />
+    <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\implement.js" />
+    <None Remove="node_modules\es5-ext\test\string\#\%40%40iterator\is-implemented.js" />
+    <None Remove="node_modules\es5-ext\test\string\#\%40%40iterator\index.js" />
+    <None Remove="node_modules\es5-ext\test\string\#\%40%40iterator\shim.js" />
+    <None Remove="node_modules\es5-ext\test\string\#\%40%40iterator\implement.js" />
+    <None Remove="node_modules\es5-ext\array\#\%40%40iterator\is-implemented.js" />
+    <None Remove="node_modules\es5-ext\array\#\%40%40iterator\index.js" />
+    <None Remove="node_modules\es5-ext\array\#\%40%40iterator\shim.js" />
+    <None Remove="node_modules\es5-ext\array\#\%40%40iterator\implement.js" />
+    <None Remove="node_modules\es5-ext\string\#\%40%40iterator\is-implemented.js" />
+    <None Remove="node_modules\es5-ext\string\#\%40%40iterator\index.js" />
+    <None Remove="node_modules\es5-ext\string\#\%40%40iterator\shim.js" />
+    <None Remove="node_modules\es5-ext\string\#\%40%40iterator\implement.js" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="maps\map0.txt" />
