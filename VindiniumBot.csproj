@@ -3731,9 +3731,28 @@
     <None Remove="node_modules\gulp-header\node_modules\lodash.template\index.js" />
     <None Remove="node_modules\gulp-header\node_modules\lodash.template\README.md" />
     <None Remove="node_modules\gulp-header\node_modules\lodash.template\package.json" />
+    <None Remove="maps\map1.txt" />
+    <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\is-implemented.js" />
+    <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\index.js" />
+    <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\shim.js" />
+    <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\implement.js" />
+    <None Remove="node_modules\es5-ext\test\string\#\%40%40iterator\is-implemented.js" />
+    <None Remove="node_modules\es5-ext\test\string\#\%40%40iterator\index.js" />
+    <None Remove="node_modules\es5-ext\test\string\#\%40%40iterator\shim.js" />
+    <None Remove="node_modules\es5-ext\test\string\#\%40%40iterator\implement.js" />
+    <None Remove="node_modules\es5-ext\array\#\%40%40iterator\is-implemented.js" />
+    <None Remove="node_modules\es5-ext\array\#\%40%40iterator\index.js" />
+    <None Remove="node_modules\es5-ext\array\#\%40%40iterator\shim.js" />
+    <None Remove="node_modules\es5-ext\array\#\%40%40iterator\implement.js" />
+    <None Remove="node_modules\es5-ext\string\#\%40%40iterator\is-implemented.js" />
+    <None Remove="node_modules\es5-ext\string\#\%40%40iterator\index.js" />
+    <None Remove="node_modules\es5-ext\string\#\%40%40iterator\shim.js" />
+    <None Remove="node_modules\es5-ext\string\#\%40%40iterator\implement.js" />
+    <None Remove="package-lock.json" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="maps\map0.txt" />
+    <EmbeddedResource Include="maps\map1.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\bot\Entry.cs" />

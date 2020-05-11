@@ -26,7 +26,7 @@ class Game
 
         state = new GameState(600);
 
-        string mapInput = ReadEmbeddedTextFile("VindiniumBot.maps.map0.txt");
+        string mapInput = ReadEmbeddedTextFile("VindiniumBot.maps.map1.txt");
 
         StringReader strReader = new StringReader(mapInput);
 

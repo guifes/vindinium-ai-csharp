@@ -10,12 +10,12 @@ class Core : IPathfinder<Vector2i, Vector2i>
     public List<Tavern> taverns;
     public List<List<bool>> map;
     public Dictionary<Vector2i, int> distanceToHero;
+    public HashSet<Vector2i> blockedTiles;
     public Tavern nearestTavern;
     public Mine nearestUnclaimedMine;
     public int size;
     public int myId;
-
-    private int heroCount = 0;
+    
     private int mineCount = 0;
 
     List<Vector2i> transitions = new List<Vector2i>(4);
@@ -27,6 +27,7 @@ class Core : IPathfinder<Vector2i, Vector2i>
         mines = new List<Mine>();
         taverns = new List<Tavern>();
         map = new List<List<bool>>();
+        blockedTiles = new HashSet<Vector2i>();
 
         transitions.Add(new Vector2i(1, 0));
         transitions.Add(new Vector2i(0, 1));
@@ -38,19 +39,19 @@ class Core : IPathfinder<Vector2i, Vector2i>
 
     public void StartTurn()
     {
-        heroCount = 0;
         mineCount = 0;
         nearestTavern = null;
         nearestUnclaimedMine = null;
 
         distanceToHero.Clear();
+        blockedTiles.Clear();
     }
 
     public void UpdateEntity(string entityType, int id, int x, int y, int life, int gold)
     {
         if (entityType == "HERO")
         {
-            Hero hero = heroes[heroCount++];
+            Hero hero = heroes[id];
 
             hero.id = id;
             hero.pos = new Vector2i(x, y);
@@ -117,6 +118,55 @@ class Core : IPathfinder<Vector2i, Vector2i>
                 }
             }
         }
+
+        // Processing possible movements
+        {
+            foreach(Vector2i t in transitions)
+            {
+                Vector2i newPosition = myHero.pos + t;
+                bool isBlocked = false;
+
+                if (!(MapContains(newPosition) && map[newPosition.y][newPosition.x])) continue;
+
+                foreach (Hero hero in heroes)
+                {
+                    if(hero.pos.Equals(newPosition))
+                    {
+                        blockedTiles.Add(newPosition);
+                        isBlocked = true;
+                    }
+                }
+
+                if (isBlocked) continue;
+
+                foreach(Vector2i t2 in transitions)
+                {
+                    Vector2i nearbyPosition = newPosition + t;
+
+                    if(nearbyPosition.Equals(myHero.pos)) continue;
+                    if (!(MapContains(nearbyPosition) && map[nearbyPosition.y][nearbyPosition.x])) continue;
+
+                    foreach (Hero hero in heroes)
+                    {
+                        int distance = (hero.pos - nearbyPosition).size;
+
+                        if (
+                            (
+                                hero.pos.Equals(newPosition) &&
+                                hero.life - myHero.life > 18
+                            ) ||
+                            (
+                                distance == 1 &&
+                                myHero.life - hero.life > 2
+                            )
+                        )
+                        {
+                            blockedTiles.Add(newPosition);
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public string GetAction()
@@ -129,6 +179,41 @@ class Core : IPathfinder<Vector2i, Vector2i>
         // (X) If needs healing, seek tavern
         // ( ) Kill nearby enemies with at least 1 mine
         // ( ) Chase enemies with more than 1/4 of mines
+
+        if(blockedTiles.Count > 0) Console.Error.WriteLine("Blocked Tiles:");
+
+        foreach (Vector2i tile in blockedTiles)
+            Console.Error.WriteLine(tile);
+
+        foreach (Vector2i t in transitions)
+        {
+            Vector2i newPosition = t + myHero.pos;
+
+            foreach (Hero hero in heroes)
+            {
+                if (hero.id == myHero.id) continue;
+
+                int heroMines = 0;
+
+                foreach (Mine mine in mines)
+                {
+                    if (mine.id == hero.id) heroMines++;
+                }
+
+                int distance = (newPosition - hero.pos).size;
+
+                if (
+                    distance == 1 &&
+                    heroMines > 0 &&
+                    hero.life - myHero.life > 18 &&
+                    !blockedTiles.Contains(newPosition)
+                )
+                {
+                    Console.Error.WriteLine("Seeking fight towards hero " + hero.id);
+                    return StepTowards(newPosition);
+                }
+            }
+        }
 
         if (
             myHero.gold >= 2 &&
@@ -147,7 +232,8 @@ class Core : IPathfinder<Vector2i, Vector2i>
             )
         )
         {
-            return "MOVE " + nearestTavern.pos.x + " " + nearestTavern.pos.y;
+            Console.Error.WriteLine("Seeking nearest tavern at " + nearestTavern.pos);
+            return StepTowards(nearestTavern.pos);
         }
         else
         {
@@ -159,15 +245,37 @@ class Core : IPathfinder<Vector2i, Vector2i>
                 }
                 else
                 {
-                    return "MOVE " + nearestTavern.pos.x + " " + nearestTavern.pos.y;
+                    Console.Error.WriteLine("Seeking nearest tavern at " + nearestTavern.pos);
+                    return StepTowards(nearestTavern.pos);
                 }
             }
             else
             {
-                return "MOVE " + nearestUnclaimedMine.pos.x + " " + nearestUnclaimedMine.pos.y;
+                Console.Error.WriteLine("Seeking nearest mine at " + nearestUnclaimedMine.pos);
+                return StepTowards(nearestUnclaimedMine.pos);
             }
         }
     }
+
+    public string StepTowards(Vector2i destination)
+    {
+        List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, destination);
+        Vector2i step = path[0] + myHero.pos;
+        return "MOVE " + step.x + " " + step.y;
+    }
+
+    public bool MapContains(Vector2i pos)
+    {
+        return (pos.x >= 0) &&
+               (pos.y >= 0) &&
+               (pos.x < size) &&
+               (pos.y < size);
+    }
+
+
+    /////////////////
+    // IPathfinder //
+    /////////////////
 
     public float Heuristic(Vector2i fromLocation, Vector2i toLocation)
     {
@@ -184,12 +292,13 @@ class Core : IPathfinder<Vector2i, Vector2i>
             Vector2i newState = ApplyTransition(state, transition);
 
             if (
-                (newState.x >= 0) &&
-                (newState.y >= 0) &&
-                (newState.x < size) &&
-                (newState.y < size) &&
+                MapContains(newState) &&
                 (
-                    newState.Equals(toState) || map[newState.y][newState.x]
+                    newState.Equals(toState) ||
+                    (
+                        map[newState.y][newState.x] &&
+                        !blockedTiles.Contains(newState)
+                    )
                 )
             )
             {

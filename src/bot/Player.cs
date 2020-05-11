@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 public class Player : IInput
 {
@@ -16,6 +17,8 @@ public class Player : IInput
         for (int i = 0; i < size; i++)
         {
             string line = map[i];
+
+            Console.Error.WriteLine(line);
 
             core.map.Add(new List<bool>());
 
