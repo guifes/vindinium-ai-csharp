@@ -59,7 +59,7 @@ public class Player : IInput
         core.myId = heroId;
     }
 
-    public string Turn(Entity[] entities)
+    public string Turn(int round, Entity[] entities)
     {
         core.StartTurn();
         

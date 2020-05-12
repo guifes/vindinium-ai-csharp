@@ -11,5 +11,5 @@
 public interface IInput
 {
     void Start(int size, string[] map, int heroId);
-    string Turn(Entity[] entities);
+    string Turn(int round, Entity[] entities);
 }

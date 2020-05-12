@@ -1,21 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 
 class Game
 {
+    const int MAX_ROUNDS = 600;
+
     static GameState state;
     static List<ConsoleColor> colors;
 
     static void Main(string[] args)
     {
+        string match = EmbeddedUtil.ReadTextFile("VindiniumBot.matches.match.txt");
+
         List<IInput> inputs = new List<IInput>();
 
         inputs.Add(new Player());
-        inputs.Add(new Player());
-        inputs.Add(new Player());
-        inputs.Add(new Player());
+        inputs.Add(new ReplayBot(1, match));
+        inputs.Add(new ReplayBot(2, match));
+        inputs.Add(new ReplayBot(3, match));
 
         colors = new List<ConsoleColor>();
 
@@ -24,9 +27,9 @@ class Game
         colors.Add(ConsoleColor.Green);
         colors.Add(ConsoleColor.Yellow);
 
-        state = new GameState(600);
+        state = new GameState(MAX_ROUNDS);
 
-        string mapInput = ReadEmbeddedTextFile("VindiniumBot.maps.map1.txt");
+        string mapInput = EmbeddedUtil.ReadTextFile("VindiniumBot.maps.map1.txt");
 
         StringReader strReader = new StringReader(mapInput);
 
@@ -190,7 +193,7 @@ class Game
                 entities[entityIndex].y = mine.pos.y;
             }
 
-            string action = input.Turn(entities);
+            string action = input.Turn(state.round, entities);
 
             Hero turnHero = state.heroes[state.turnId];
 
@@ -457,16 +460,5 @@ class Game
             return "NORTH";
 
         return "WAIT";
-    }
-
-    static string ReadEmbeddedTextFile(string name)
-    {
-        var assembly = Assembly.GetExecutingAssembly();
-
-        using (Stream stream = assembly.GetManifestResourceStream(name))
-        using (StreamReader reader = new StreamReader(stream))
-        {
-            return reader.ReadToEnd();
-        }
     }
 }
