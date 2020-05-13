@@ -1,0 +1,2400 @@
+﻿Standard Output Stream:
+SOUTH
+001
+600
+Standard Output Stream:
+SOUTH go there
+002
+600
+Standard Output Stream:
+SOUTH go there
+003
+600
+Standard Output Stream:
+SOUTH go there
+004
+600
+Standard Output Stream:
+EAST
+005
+600
+Standard Output Stream:
+NORTH go there
+006
+600
+Standard Output Stream:
+EAST go there
+007
+600
+Standard Output Stream:
+SOUTH go there
+008
+600
+Standard Output Stream:
+SOUTH
+009
+600
+Standard Output Stream:
+EAST go there
+010
+600
+Standard Output Stream:
+WEST go there
+011
+600
+Standard Output Stream:
+NORTH go there
+012
+600
+Standard Output Stream:
+SOUTH
+013
+600
+Standard Output Stream:
+EAST go there
+014
+600
+Standard Output Stream:
+NORTH go there
+015
+600
+Standard Output Stream:
+WEST go there
+016
+600
+Standard Output Stream:
+SOUTH
+017
+600
+Standard Output Stream:
+NORTH go there
+018
+600
+Standard Output Stream:
+EAST go there
+019
+600
+Standard Output Stream:
+NORTH go there
+020
+600
+Standard Output Stream:
+WEST
+021
+600
+Standard Output Stream:
+NORTH go there
+022
+600
+Standard Output Stream:
+WEST go there
+023
+600
+Standard Output Stream:
+SOUTH go there
+024
+600
+Standard Output Stream:
+WEST
+025
+600
+Standard Output Stream:
+EAST go there
+026
+600
+Standard Output Stream:
+WEST go there
+027
+600
+Standard Output Stream:
+WEST go there
+028
+600
+Standard Output Stream:
+WEST
+029
+600
+Standard Output Stream:
+SOUTH go there
+030
+600
+Standard Output Stream:
+NORTH go there
+031
+600
+Standard Output Stream:
+SOUTH go there
+032
+600
+Standard Output Stream:
+SOUTH
+033
+600
+Standard Output Stream:
+WEST go there
+034
+600
+Standard Output Stream:
+WEST go there
+035
+600
+Standard Output Stream:
+NORTH go there
+036
+600
+Standard Output Stream:
+EAST
+037
+600
+Standard Output Stream:
+SOUTH go there
+038
+600
+Standard Output Stream:
+WEST go there
+039
+600
+Standard Output Stream:
+WEST go there
+040
+600
+Standard Output Stream:
+EAST
+041
+600
+Standard Output Stream:
+NORTH go there
+042
+600
+Standard Output Stream:
+WEST go there
+043
+600
+Standard Output Stream:
+SOUTH go there
+044
+600
+Standard Output Stream:
+SOUTH
+045
+600
+Standard Output Stream:
+NORTH go there
+046
+600
+Standard Output Stream:
+EAST go there
+047
+600
+Standard Output Stream:
+EAST go there
+048
+600
+Standard Output Stream:
+SOUTH
+049
+600
+Standard Output Stream:
+WEST go there
+050
+600
+Standard Output Stream:
+NORTH go there
+051
+600
+Standard Output Stream:
+WEST go there
+052
+600
+Standard Output Stream:
+WEST
+053
+600
+Standard Output Stream:
+NORTH go there
+054
+600
+Standard Output Stream:
+SOUTH go there
+055
+600
+Standard Output Stream:
+NORTH go there
+056
+600
+Standard Output Stream:
+SOUTH
+057
+600
+Standard Output Stream:
+WEST go there
+058
+600
+Standard Output Stream:
+NORTH go there
+059
+600
+Standard Output Stream:
+NORTH go there
+060
+600
+Standard Output Stream:
+WEST
+061
+600
+Standard Output Stream:
+SOUTH go there
+062
+600
+Standard Output Stream:
+WEST go there
+063
+600
+Standard Output Stream:
+EAST go there
+064
+600
+Standard Output Stream:
+EAST
+065
+600
+Standard Output Stream:
+WEST go there
+066
+600
+Standard Output Stream:
+SOUTH go there
+067
+600
+Standard Output Stream:
+WEST go there
+068
+600
+Standard Output Stream:
+SOUTH
+069
+600
+Standard Output Stream:
+WEST go there
+070
+600
+Standard Output Stream:
+NORTH go there
+071
+600
+Standard Output Stream:
+NORTH go there
+072
+600
+Standard Output Stream:
+SOUTH
+073
+600
+Standard Output Stream:
+WEST go there
+074
+600
+Standard Output Stream:
+WEST go there
+075
+600
+Standard Output Stream:
+WEST go there
+076
+600
+Standard Output Stream:
+SOUTH
+077
+600
+Standard Output Stream:
+EAST go there
+078
+600
+Standard Output Stream:
+SOUTH go there
+079
+600
+Standard Output Stream:
+WEST go there
+080
+600
+Standard Output Stream:
+SOUTH
+081
+600
+Standard Output Stream:
+EAST go there
+082
+600
+Standard Output Stream:
+NORTH go there
+083
+600
+Standard Output Stream:
+NORTH go there
+084
+600
+Standard Output Stream:
+EAST
+085
+600
+Standard Output Stream:
+WEST go there
+086
+600
+Standard Output Stream:
+NORTH go there
+087
+600
+Standard Output Stream:
+SOUTH go there
+088
+600
+Standard Output Stream:
+SOUTH
+089
+600
+Standard Output Stream:
+EAST go there
+090
+600
+Standard Output Stream:
+SOUTH go there
+091
+600
+Standard Output Stream:
+WEST go there
+092
+600
+Standard Output Stream:
+SOUTH
+093
+600
+Standard Output Stream:
+NORTH go there
+094
+600
+Standard Output Stream:
+WEST go there
+095
+600
+Standard Output Stream:
+SOUTH go there
+096
+600
+Standard Output Stream:
+SOUTH
+097
+600
+Standard Output Stream:
+EAST go there
+098
+600
+Standard Output Stream:
+WEST go there
+099
+600
+Standard Output Stream:
+WEST go there
+100
+600
+Standard Output Stream:
+WEST
+101
+600
+Standard Output Stream:
+EAST go there
+102
+600
+Standard Output Stream:
+EAST go there
+103
+600
+Standard Output Stream:
+NORTH go there
+104
+600
+Standard Output Stream:
+WEST
+105
+600
+Standard Output Stream:
+SOUTH go there
+106
+600
+Standard Output Stream:
+NORTH go there
+107
+600
+Standard Output Stream:
+SOUTH go there
+108
+600
+Standard Output Stream:
+WEST
+109
+600
+Standard Output Stream:
+WEST go there
+110
+600
+Standard Output Stream:
+EAST go there
+111
+600
+Standard Output Stream:
+NORTH go there
+112
+600
+Standard Output Stream:
+SOUTH
+113
+600
+Standard Output Stream:
+NORTH go there
+114
+600
+Standard Output Stream:
+EAST go there
+115
+600
+Standard Output Stream:
+WEST go there
+116
+600
+Standard Output Stream:
+EAST
+117
+600
+Standard Output Stream:
+SOUTH go there
+118
+600
+Standard Output Stream:
+WEST go there
+119
+600
+Standard Output Stream:
+EAST go there
+120
+600
+Standard Output Stream:
+EAST
+121
+600
+Standard Output Stream:
+WEST go there
+122
+600
+Standard Output Stream:
+EAST go there
+123
+600
+Standard Output Stream:
+NORTH go there
+124
+600
+Standard Output Stream:
+SOUTH
+125
+600
+Standard Output Stream:
+SOUTH go there
+126
+600
+Standard Output Stream:
+SOUTH go there
+127
+600
+Standard Output Stream:
+SOUTH go there
+128
+600
+Standard Output Stream:
+SOUTH
+129
+600
+Standard Output Stream:
+SOUTH go there
+130
+600
+Standard Output Stream:
+WEST go there
+131
+600
+Standard Output Stream:
+SOUTH go there
+132
+600
+Standard Output Stream:
+WEST
+133
+600
+Standard Output Stream:
+NORTH go there
+134
+600
+Standard Output Stream:
+SOUTH go there
+135
+600
+Standard Output Stream:
+EAST go there
+136
+600
+Standard Output Stream:
+SOUTH
+137
+600
+Standard Output Stream:
+NORTH go there
+138
+600
+Standard Output Stream:
+SOUTH go there
+139
+600
+Standard Output Stream:
+NORTH go there
+140
+600
+Standard Output Stream:
+WEST
+141
+600
+Standard Output Stream:
+WEST go there
+142
+600
+Standard Output Stream:
+EAST go there
+143
+600
+Standard Output Stream:
+WEST go there
+144
+600
+Standard Output Stream:
+SOUTH
+145
+600
+Standard Output Stream:
+EAST go there
+146
+600
+Standard Output Stream:
+EAST go there
+147
+600
+Standard Output Stream:
+EAST go there
+148
+600
+Standard Output Stream:
+NORTH
+149
+600
+Standard Output Stream:
+SOUTH go there
+150
+600
+Standard Output Stream:
+WEST go there
+151
+600
+Standard Output Stream:
+EAST go there
+152
+600
+Standard Output Stream:
+EAST
+153
+600
+Standard Output Stream:
+NORTH go there
+154
+600
+Standard Output Stream:
+NORTH go there
+155
+600
+Standard Output Stream:
+EAST go there
+156
+600
+Standard Output Stream:
+SOUTH
+157
+600
+Standard Output Stream:
+WEST go there
+158
+600
+Standard Output Stream:
+NORTH go there
+159
+600
+Standard Output Stream:
+NORTH go there
+160
+600
+Standard Output Stream:
+SOUTH
+161
+600
+Standard Output Stream:
+SOUTH go there
+162
+600
+Standard Output Stream:
+SOUTH go there
+163
+600
+Standard Output Stream:
+EAST go there
+164
+600
+Standard Output Stream:
+SOUTH
+165
+600
+Standard Output Stream:
+EAST go there
+166
+600
+Standard Output Stream:
+NORTH go there
+167
+600
+Standard Output Stream:
+WEST go there
+168
+600
+Standard Output Stream:
+SOUTH
+169
+600
+Standard Output Stream:
+WEST go there
+170
+600
+Standard Output Stream:
+WEST go there
+171
+600
+Standard Output Stream:
+NORTH go there
+172
+600
+Standard Output Stream:
+WEST
+173
+600
+Standard Output Stream:
+NORTH go there
+174
+600
+Standard Output Stream:
+SOUTH go there
+175
+600
+Standard Output Stream:
+SOUTH go there
+176
+600
+Standard Output Stream:
+WEST
+177
+600
+Standard Output Stream:
+NORTH go there
+178
+600
+Standard Output Stream:
+NORTH go there
+179
+600
+Standard Output Stream:
+EAST go there
+180
+600
+Standard Output Stream:
+WEST
+181
+600
+Standard Output Stream:
+WEST go there
+182
+600
+Standard Output Stream:
+NORTH go there
+183
+600
+Standard Output Stream:
+NORTH go there
+184
+600
+Standard Output Stream:
+SOUTH
+185
+600
+Standard Output Stream:
+SOUTH go there
+186
+600
+Standard Output Stream:
+NORTH go there
+187
+600
+Standard Output Stream:
+WEST go there
+188
+600
+Standard Output Stream:
+EAST
+189
+600
+Standard Output Stream:
+NORTH go there
+190
+600
+Standard Output Stream:
+SOUTH go there
+191
+600
+Standard Output Stream:
+NORTH go there
+192
+600
+Standard Output Stream:
+EAST
+193
+600
+Standard Output Stream:
+SOUTH go there
+194
+600
+Standard Output Stream:
+WEST go there
+195
+600
+Standard Output Stream:
+WEST go there
+196
+600
+Standard Output Stream:
+EAST
+197
+600
+Standard Output Stream:
+SOUTH go there
+198
+600
+Standard Output Stream:
+SOUTH go there
+199
+600
+Standard Output Stream:
+EAST go there
+200
+600
+Standard Output Stream:
+NORTH
+201
+600
+Standard Output Stream:
+NORTH go there
+202
+600
+Standard Output Stream:
+NORTH go there
+203
+600
+Standard Output Stream:
+SOUTH go there
+204
+600
+Standard Output Stream:
+NORTH
+205
+600
+Standard Output Stream:
+EAST go there
+206
+600
+Standard Output Stream:
+SOUTH go there
+207
+600
+Standard Output Stream:
+SOUTH go there
+208
+600
+Standard Output Stream:
+NORTH
+209
+600
+Standard Output Stream:
+EAST go there
+210
+600
+Standard Output Stream:
+SOUTH go there
+211
+600
+Standard Output Stream:
+SOUTH go there
+212
+600
+Standard Output Stream:
+EAST
+213
+600
+Standard Output Stream:
+NORTH go there
+214
+600
+Standard Output Stream:
+NORTH go there
+215
+600
+Standard Output Stream:
+EAST go there
+216
+600
+Standard Output Stream:
+SOUTH
+217
+600
+Standard Output Stream:
+SOUTH go there
+218
+600
+Standard Output Stream:
+SOUTH go there
+219
+600
+Standard Output Stream:
+EAST go there
+220
+600
+Standard Output Stream:
+SOUTH
+221
+600
+Standard Output Stream:
+SOUTH go there
+222
+600
+Standard Output Stream:
+SOUTH go there
+223
+600
+Standard Output Stream:
+EAST go there
+224
+600
+Standard Output Stream:
+SOUTH
+225
+600
+Standard Output Stream:
+SOUTH go there
+226
+600
+Standard Output Stream:
+NORTH go there
+227
+600
+Standard Output Stream:
+SOUTH go there
+228
+600
+Standard Output Stream:
+SOUTH
+229
+600
+Standard Output Stream:
+WEST go there
+230
+600
+Standard Output Stream:
+SOUTH go there
+231
+600
+Standard Output Stream:
+NORTH go there
+232
+600
+Standard Output Stream:
+WEST
+233
+600
+Standard Output Stream:
+NORTH go there
+234
+600
+Standard Output Stream:
+WEST go there
+235
+600
+Standard Output Stream:
+WEST go there
+236
+600
+Standard Output Stream:
+WEST
+237
+600
+Standard Output Stream:
+EAST go there
+238
+600
+Standard Output Stream:
+NORTH go there
+239
+600
+Standard Output Stream:
+NORTH go there
+240
+600
+Standard Output Stream:
+WEST
+241
+600
+Standard Output Stream:
+SOUTH go there
+242
+600
+Standard Output Stream:
+SOUTH go there
+243
+600
+Standard Output Stream:
+EAST go there
+244
+600
+Standard Output Stream:
+SOUTH
+245
+600
+Standard Output Stream:
+NORTH go there
+246
+600
+Standard Output Stream:
+SOUTH go there
+247
+600
+Standard Output Stream:
+EAST go there
+248
+600
+Standard Output Stream:
+EAST
+249
+600
+Standard Output Stream:
+NORTH go there
+250
+600
+Standard Output Stream:
+WEST go there
+251
+600
+Standard Output Stream:
+EAST go there
+252
+600
+Standard Output Stream:
+EAST
+253
+600
+Standard Output Stream:
+NORTH go there
+254
+600
+Standard Output Stream:
+NORTH go there
+255
+600
+Standard Output Stream:
+EAST go there
+256
+600
+Standard Output Stream:
+SOUTH
+257
+600
+Standard Output Stream:
+NORTH go there
+258
+600
+Standard Output Stream:
+NORTH go there
+259
+600
+Standard Output Stream:
+EAST go there
+260
+600
+Standard Output Stream:
+SOUTH
+261
+600
+Standard Output Stream:
+SOUTH go there
+262
+600
+Standard Output Stream:
+WEST go there
+263
+600
+Standard Output Stream:
+EAST go there
+264
+600
+Standard Output Stream:
+SOUTH
+265
+600
+Standard Output Stream:
+NORTH go there
+266
+600
+Standard Output Stream:
+NORTH go there
+267
+600
+Standard Output Stream:
+NORTH go there
+268
+600
+Standard Output Stream:
+SOUTH
+269
+600
+Standard Output Stream:
+EAST go there
+270
+600
+Standard Output Stream:
+NORTH go there
+271
+600
+Standard Output Stream:
+NORTH go there
+272
+600
+Standard Output Stream:
+SOUTH
+273
+600
+Standard Output Stream:
+NORTH go there
+274
+600
+Standard Output Stream:
+NORTH go there
+275
+600
+Standard Output Stream:
+SOUTH go there
+276
+600
+Standard Output Stream:
+WEST
+277
+600
+Standard Output Stream:
+EAST go there
+278
+600
+Standard Output Stream:
+WEST go there
+279
+600
+Standard Output Stream:
+NORTH go there
+280
+600
+Standard Output Stream:
+WEST
+281
+600
+Standard Output Stream:
+SOUTH go there
+282
+600
+Standard Output Stream:
+WEST go there
+283
+600
+Standard Output Stream:
+EAST go there
+284
+600
+Standard Output Stream:
+NORTH
+285
+600
+Standard Output Stream:
+NORTH go there
+286
+600
+Standard Output Stream:
+SOUTH go there
+287
+600
+Standard Output Stream:
+NORTH go there
+288
+600
+Standard Output Stream:
+EAST
+289
+600
+Standard Output Stream:
+WEST go there
+290
+600
+Standard Output Stream:
+EAST go there
+291
+600
+Standard Output Stream:
+NORTH go there
+292
+600
+Standard Output Stream:
+EAST
+293
+600
+Standard Output Stream:
+NORTH go there
+294
+600
+Standard Output Stream:
+WEST go there
+295
+600
+Standard Output Stream:
+NORTH go there
+296
+600
+Standard Output Stream:
+EAST
+297
+600
+Standard Output Stream:
+NORTH go there
+298
+600
+Standard Output Stream:
+SOUTH go there
+299
+600
+Standard Output Stream:
+EAST go there
+300
+600
+Standard Output Stream:
+EAST
+301
+600
+Standard Output Stream:
+NORTH go there
+302
+600
+Standard Output Stream:
+NORTH go there
+303
+600
+Standard Output Stream:
+EAST go there
+304
+600
+Standard Output Stream:
+SOUTH
+305
+600
+Standard Output Stream:
+EAST go there
+306
+600
+Standard Output Stream:
+NORTH go there
+307
+600
+Standard Output Stream:
+EAST go there
+308
+600
+Standard Output Stream:
+SOUTH
+309
+600
+Standard Output Stream:
+WEST go there
+310
+600
+Standard Output Stream:
+NORTH go there
+311
+600
+Standard Output Stream:
+EAST go there
+312
+600
+Standard Output Stream:
+SOUTH
+313
+600
+Standard Output Stream:
+NORTH go there
+314
+600
+Standard Output Stream:
+NORTH go there
+315
+600
+Standard Output Stream:
+SOUTH go there
+316
+600
+Standard Output Stream:
+SOUTH
+317
+600
+Standard Output Stream:
+EAST go there
+318
+600
+Standard Output Stream:
+WEST go there
+319
+600
+Standard Output Stream:
+EAST go there
+320
+600
+Standard Output Stream:
+WEST
+321
+600
+Standard Output Stream:
+EAST go there
+322
+600
+Standard Output Stream:
+NORTH go there
+323
+600
+Standard Output Stream:
+SOUTH go there
+324
+600
+Standard Output Stream:
+WEST
+325
+600
+Standard Output Stream:
+WEST go there
+326
+600
+Standard Output Stream:
+EAST go there
+327
+600
+Standard Output Stream:
+SOUTH go there
+328
+600
+Standard Output Stream:
+WEST
+329
+600
+Standard Output Stream:
+NORTH go there
+330
+600
+Standard Output Stream:
+NORTH go there
+331
+600
+Standard Output Stream:
+EAST go there
+332
+600
+Standard Output Stream:
+SOUTH
+333
+600
+Standard Output Stream:
+SOUTH go there
+334
+600
+Standard Output Stream:
+SOUTH go there
+335
+600
+Standard Output Stream:
+SOUTH go there
+336
+600
+Standard Output Stream:
+EAST
+337
+600
+Standard Output Stream:
+WEST go there
+338
+600
+Standard Output Stream:
+NORTH go there
+339
+600
+Standard Output Stream:
+EAST go there
+340
+600
+Standard Output Stream:
+EAST
+341
+600
+Standard Output Stream:
+EAST go there
+342
+600
+Standard Output Stream:
+EAST go there
+343
+600
+Standard Output Stream:
+SOUTH go there
+344
+600
+Standard Output Stream:
+SOUTH
+345
+600
+Standard Output Stream:
+NORTH go there
+346
+600
+Standard Output Stream:
+EAST go there
+347
+600
+Standard Output Stream:
+EAST go there
+348
+600
+Standard Output Stream:
+SOUTH
+349
+600
+Standard Output Stream:
+EAST go there
+350
+600
+Standard Output Stream:
+EAST go there
+351
+600
+Standard Output Stream:
+EAST go there
+352
+600
+Standard Output Stream:
+WEST
+353
+600
+Standard Output Stream:
+SOUTH go there
+354
+600
+Standard Output Stream:
+EAST go there
+355
+600
+Standard Output Stream:
+WEST go there
+356
+600
+Standard Output Stream:
+EAST
+357
+600
+Standard Output Stream:
+NORTH go there
+358
+600
+Standard Output Stream:
+EAST go there
+359
+600
+Standard Output Stream:
+EAST go there
+360
+600
+Standard Output Stream:
+SOUTH
+361
+600
+Standard Output Stream:
+SOUTH go there
+362
+600
+Standard Output Stream:
+EAST go there
+363
+600
+Standard Output Stream:
+NORTH go there
+364
+600
+Standard Output Stream:
+EAST
+365
+600
+Standard Output Stream:
+NORTH go there
+366
+600
+Standard Output Stream:
+WEST go there
+367
+600
+Standard Output Stream:
+WEST go there
+368
+600
+Standard Output Stream:
+SOUTH
+369
+600
+Standard Output Stream:
+NORTH go there
+370
+600
+Standard Output Stream:
+WEST go there
+371
+600
+Standard Output Stream:
+WEST go there
+372
+600
+Standard Output Stream:
+SOUTH
+373
+600
+Standard Output Stream:
+WEST go there
+374
+600
+Standard Output Stream:
+EAST go there
+375
+600
+Standard Output Stream:
+WEST go there
+376
+600
+Standard Output Stream:
+WEST
+377
+600
+Standard Output Stream:
+SOUTH go there
+378
+600
+Standard Output Stream:
+WEST go there
+379
+600
+Standard Output Stream:
+SOUTH go there
+380
+600
+Standard Output Stream:
+SOUTH
+381
+600
+Standard Output Stream:
+SOUTH go there
+382
+600
+Standard Output Stream:
+SOUTH go there
+383
+600
+Standard Output Stream:
+WEST go there
+384
+600
+Standard Output Stream:
+WEST
+385
+600
+Standard Output Stream:
+WEST go there
+386
+600
+Standard Output Stream:
+EAST go there
+387
+600
+Standard Output Stream:
+SOUTH go there
+388
+600
+Standard Output Stream:
+WEST
+389
+600
+Standard Output Stream:
+WEST go there
+390
+600
+Standard Output Stream:
+WEST go there
+391
+600
+Standard Output Stream:
+WEST go there
+392
+600
+Standard Output Stream:
+SOUTH
+393
+600
+Standard Output Stream:
+NORTH go there
+394
+600
+Standard Output Stream:
+SOUTH go there
+395
+600
+Standard Output Stream:
+NORTH go there
+396
+600
+Standard Output Stream:
+EAST
+397
+600
+Standard Output Stream:
+EAST go there
+398
+600
+Standard Output Stream:
+SOUTH go there
+399
+600
+Standard Output Stream:
+NORTH go there
+400
+600
+Standard Output Stream:
+EAST
+401
+600
+Standard Output Stream:
+EAST go there
+402
+600
+Standard Output Stream:
+WEST go there
+403
+600
+Standard Output Stream:
+NORTH go there
+404
+600
+Standard Output Stream:
+SOUTH
+405
+600
+Standard Output Stream:
+EAST go there
+406
+600
+Standard Output Stream:
+EAST go there
+407
+600
+Standard Output Stream:
+SOUTH go there
+408
+600
+Standard Output Stream:
+SOUTH
+409
+600
+Standard Output Stream:
+EAST go there
+410
+600
+Standard Output Stream:
+EAST go there
+411
+600
+Standard Output Stream:
+NORTH go there
+412
+600
+Standard Output Stream:
+WEST
+413
+600
+Standard Output Stream:
+WEST go there
+414
+600
+Standard Output Stream:
+EAST go there
+415
+600
+Standard Output Stream:
+WEST go there
+416
+600
+Standard Output Stream:
+SOUTH
+417
+600
+Standard Output Stream:
+EAST go there
+418
+600
+Standard Output Stream:
+NORTH go there
+419
+600
+Standard Output Stream:
+SOUTH go there
+420
+600
+Standard Output Stream:
+WEST
+421
+600
+Standard Output Stream:
+EAST go there
+422
+600
+Standard Output Stream:
+SOUTH go there
+423
+600
+Standard Output Stream:
+NORTH go there
+424
+600
+Standard Output Stream:
+EAST
+425
+600
+Standard Output Stream:
+EAST go there
+426
+600
+Standard Output Stream:
+NORTH go there
+427
+600
+Standard Output Stream:
+SOUTH go there
+428
+600
+Standard Output Stream:
+SOUTH
+429
+600
+Standard Output Stream:
+NORTH go there
+430
+600
+Standard Output Stream:
+WEST go there
+431
+600
+Standard Output Stream:
+NORTH go there
+432
+600
+Standard Output Stream:
+SOUTH
+433
+600
+Standard Output Stream:
+SOUTH go there
+434
+600
+Standard Output Stream:
+NORTH go there
+435
+600
+Standard Output Stream:
+EAST go there
+436
+600
+Standard Output Stream:
+SOUTH
+437
+600
+Standard Output Stream:
+NORTH go there
+438
+600
+Standard Output Stream:
+EAST go there
+439
+600
+Standard Output Stream:
+NORTH go there
+440
+600
+Standard Output Stream:
+SOUTH
+441
+600
+Standard Output Stream:
+WEST go there
+442
+600
+Standard Output Stream:
+SOUTH go there
+443
+600
+Standard Output Stream:
+SOUTH go there
+444
+600
+Standard Output Stream:
+EAST
+445
+600
+Standard Output Stream:
+SOUTH go there
+446
+600
+Standard Output Stream:
+WEST go there
+447
+600
+Standard Output Stream:
+EAST go there
+448
+600
+Standard Output Stream:
+WEST
+449
+600
+Standard Output Stream:
+SOUTH go there
+450
+600
+Standard Output Stream:
+NORTH go there
+451
+600
+Standard Output Stream:
+WEST go there
+452
+600
+Standard Output Stream:
+EAST
+453
+600
+Standard Output Stream:
+EAST go there
+454
+600
+Standard Output Stream:
+NORTH go there
+455
+600
+Standard Output Stream:
+SOUTH go there
+456
+600
+Standard Output Stream:
+WEST
+457
+600
+Standard Output Stream:
+WEST go there
+458
+600
+Standard Output Stream:
+NORTH go there
+459
+600
+Standard Output Stream:
+NORTH go there
+460
+600
+Standard Output Stream:
+EAST
+461
+600
+Standard Output Stream:
+EAST go there
+462
+600
+Standard Output Stream:
+EAST go there
+463
+600
+Standard Output Stream:
+EAST go there
+464
+600
+Standard Output Stream:
+WEST
+465
+600
+Standard Output Stream:
+SOUTH go there
+466
+600
+Standard Output Stream:
+SOUTH go there
+467
+600
+Standard Output Stream:
+EAST go there
+468
+600
+Standard Output Stream:
+SOUTH
+469
+600
+Standard Output Stream:
+EAST go there
+470
+600
+Standard Output Stream:
+WEST go there
+471
+600
+Standard Output Stream:
+SOUTH go there
+472
+600
+Standard Output Stream:
+SOUTH
+473
+600
+Standard Output Stream:
+EAST go there
+474
+600
+Standard Output Stream:
+SOUTH go there
+475
+600
+Standard Output Stream:
+WEST go there
+476
+600
+Standard Output Stream:
+SOUTH
+477
+600
+Standard Output Stream:
+NORTH go there
+478
+600
+Standard Output Stream:
+NORTH go there
+479
+600
+Standard Output Stream:
+NORTH go there
+480
+600
+Standard Output Stream:
+SOUTH
+481
+600
+Standard Output Stream:
+EAST go there
+482
+600
+Standard Output Stream:
+NORTH go there
+483
+600
+Standard Output Stream:
+EAST go there
+484
+600
+Standard Output Stream:
+SOUTH
+485
+600
+Standard Output Stream:
+NORTH go there
+486
+600
+Standard Output Stream:
+EAST go there
+487
+600
+Standard Output Stream:
+NORTH go there
+488
+600
+Standard Output Stream:
+EAST
+489
+600
+Standard Output Stream:
+EAST go there
+490
+600
+Standard Output Stream:
+SOUTH go there
+491
+600
+Standard Output Stream:
+NORTH go there
+492
+600
+Standard Output Stream:
+EAST
+493
+600
+Standard Output Stream:
+SOUTH go there
+494
+600
+Standard Output Stream:
+SOUTH go there
+495
+600
+Standard Output Stream:
+EAST go there
+496
+600
+Standard Output Stream:
+SOUTH
+497
+600
+Standard Output Stream:
+SOUTH go there
+498
+600
+Standard Output Stream:
+SOUTH go there
+499
+600
+Standard Output Stream:
+SOUTH go there
+500
+600
+Standard Output Stream:
+EAST
+501
+600
+Standard Output Stream:
+EAST go there
+502
+600
+Standard Output Stream:
+WEST go there
+503
+600
+Standard Output Stream:
+NORTH go there
+504
+600
+Standard Output Stream:
+WEST
+505
+600
+Standard Output Stream:
+WEST go there
+506
+600
+Standard Output Stream:
+EAST go there
+507
+600
+Standard Output Stream:
+SOUTH go there
+508
+600
+Standard Output Stream:
+EAST
+509
+600
+Standard Output Stream:
+NORTH go there
+510
+600
+Standard Output Stream:
+WEST go there
+511
+600
+Standard Output Stream:
+EAST go there
+512
+600
+Standard Output Stream:
+WEST
+513
+600
+Standard Output Stream:
+NORTH go there
+514
+600
+Standard Output Stream:
+WEST go there
+515
+600
+Standard Output Stream:
+SOUTH go there
+516
+600
+Standard Output Stream:
+NORTH
+517
+600
+Standard Output Stream:
+EAST go there
+518
+600
+Standard Output Stream:
+NORTH go there
+519
+600
+Standard Output Stream:
+EAST go there
+520
+600
+Standard Output Stream:
+NORTH
+521
+600
+Standard Output Stream:
+NORTH go there
+522
+600
+Standard Output Stream:
+NORTH go there
+523
+600
+Standard Output Stream:
+WEST go there
+524
+600
+Standard Output Stream:
+NORTH
+525
+600
+Standard Output Stream:
+NORTH go there
+526
+600
+Standard Output Stream:
+WEST go there
+527
+600
+Standard Output Stream:
+WEST go there
+528
+600
+Standard Output Stream:
+NORTH
+529
+600
+Standard Output Stream:
+SOUTH go there
+530
+600
+Standard Output Stream:
+EAST go there
+531
+600
+Standard Output Stream:
+NORTH go there
+532
+600
+Standard Output Stream:
+NORTH
+533
+600
+Standard Output Stream:
+WEST go there
+534
+600
+Standard Output Stream:
+WEST go there
+535
+600
+Standard Output Stream:
+NORTH go there
+536
+600
+Standard Output Stream:
+SOUTH
+537
+600
+Standard Output Stream:
+SOUTH go there
+538
+600
+Standard Output Stream:
+EAST go there
+539
+600
+Standard Output Stream:
+EAST go there
+540
+600
+Standard Output Stream:
+SOUTH
+541
+600
+Standard Output Stream:
+NORTH go there
+542
+600
+Standard Output Stream:
+WEST go there
+543
+600
+Standard Output Stream:
+EAST go there
+544
+600
+Standard Output Stream:
+NORTH
+545
+600
+Standard Output Stream:
+SOUTH go there
+546
+600
+Standard Output Stream:
+WEST go there
+547
+600
+Standard Output Stream:
+EAST go there
+548
+600
+Standard Output Stream:
+SOUTH
+549
+600
+Standard Output Stream:
+SOUTH go there
+550
+600
+Standard Output Stream:
+SOUTH go there
+551
+600
+Standard Output Stream:
+SOUTH go there
+552
+600
+Standard Output Stream:
+SOUTH
+553
+600
+Standard Output Stream:
+WEST go there
+554
+600
+Standard Output Stream:
+EAST go there
+555
+600
+Standard Output Stream:
+NORTH go there
+556
+600
+Standard Output Stream:
+SOUTH
+557
+600
+Standard Output Stream:
+SOUTH go there
+558
+600
+Standard Output Stream:
+SOUTH go there
+559
+600
+Standard Output Stream:
+SOUTH go there
+560
+600
+Standard Output Stream:
+EAST
+561
+600
+Standard Output Stream:
+SOUTH go there
+562
+600
+Standard Output Stream:
+SOUTH go there
+563
+600
+Standard Output Stream:
+NORTH go there
+564
+600
+Standard Output Stream:
+EAST
+565
+600
+Standard Output Stream:
+EAST go there
+566
+600
+Standard Output Stream:
+EAST go there
+567
+600
+Standard Output Stream:
+EAST go there
+568
+600
+Standard Output Stream:
+SOUTH
+569
+600
+Standard Output Stream:
+NORTH go there
+570
+600
+Standard Output Stream:
+SOUTH go there
+571
+600
+Standard Output Stream:
+WEST go there
+572
+600
+Standard Output Stream:
+NORTH
+573
+600
+Standard Output Stream:
+EAST go there
+574
+600
+Standard Output Stream:
+EAST go there
+575
+600
+Standard Output Stream:
+NORTH go there
+576
+600
+Standard Output Stream:
+NORTH
+577
+600
+Standard Output Stream:
+EAST go there
+578
+600
+Standard Output Stream:
+SOUTH go there
+579
+600
+Standard Output Stream:
+WEST go there
+580
+600
+Standard Output Stream:
+SOUTH
+581
+600
+Standard Output Stream:
+SOUTH go there
+582
+600
+Standard Output Stream:
+SOUTH go there
+583
+600
+Standard Output Stream:
+EAST go there
+584
+600
+Standard Output Stream:
+SOUTH
+585
+600
+Standard Output Stream:
+WEST go there
+586
+600
+Standard Output Stream:
+SOUTH go there
+587
+600
+Standard Output Stream:
+EAST go there
+588
+600
+Standard Output Stream:
+NORTH
+589
+600
+Standard Output Stream:
+NORTH go there
+590
+600
+Standard Output Stream:
+WEST go there
+591
+600
+Standard Output Stream:
+NORTH go there
+592
+600
+Standard Output Stream:
+NORTH
+593
+600
+Standard Output Stream:
+NORTH go there
+594
+600
+Standard Output Stream:
+NORTH go there
+595
+600
+Standard Output Stream:
+SOUTH go there
+596
+600
+Standard Output Stream:
+NORTH
+597
+600
+Standard Output Stream:
+SOUTH go there
+598
+600
+Standard Output Stream:
+SOUTH go there
+599
+600
+Standard Output Stream:
+EAST go there
+600
+600

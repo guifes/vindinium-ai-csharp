@@ -11,7 +11,7 @@ class Game
 
     static void Main(string[] args)
     {
-        string match = EmbeddedUtil.ReadTextFile("VindiniumBot.matches.match3.txt");
+        string match = EmbeddedUtil.ReadTextFile("VindiniumBot.matches.match4.txt");
 
         List<IInput> inputs = new List<IInput>();
 
@@ -29,31 +29,36 @@ class Game
 
         state = new GameState(MAX_ROUNDS);
 
-        string mapInput = EmbeddedUtil.ReadTextFile("VindiniumBot.maps.map3.txt");
+        string mapInput = EmbeddedUtil.ReadTextFile("VindiniumBot.maps.map4.txt");
 
         StringReader strReader = new StringReader(mapInput);
 
         state.map = new List<List<bool>>();
 
-        int my = 0;
+        string[] map = null;
+        string line = null;
+        int size = 0;
+        int lineCount = 0;
 
-        string line = strReader.ReadLine();
-
-        int size = line.Length;
-
-        state.size = size;
-
-        string[] map = new string[size];
-
-        while (line != null)
+        while ((line = strReader.ReadLine()) != null)
         {
-            state.map.Add(new List<bool>(line.Length));
-
-            map[my] = line;
-            
-            for (int mx = 0; mx < line.Length; mx++)
+            if (map == null)
             {
-                char c = line[mx];
+                size = line.Length;
+                map = new string[size];
+            }
+
+            map[lineCount++] = line;
+        }
+
+        for(int x = 0; x < size; x++)
+        {
+            for(int y = 0; y < size; y++)
+            {
+                state.map.Add(new List<bool>(size));
+
+                line = map[y];
+                char c = line[x];
 
                 switch (c)
                 {
@@ -61,10 +66,12 @@ class Game
                         {
                             Mine mine = new Mine();
                             mine.id = -1;
-                            mine.pos = new Vector2i(mx, my);
+                            mine.pos = new Vector2i(x, y);
 
                             state.mines.Add(mine);
-                            state.map[my].Add(false);
+                            state.map[y].Add(false);
+
+                            Console.Error.WriteLine(mine.pos);
 
                             break;
                         }
@@ -74,11 +81,11 @@ class Game
                             hero.gold = 0;
                             hero.id = 0;
                             hero.life = 100;
-                            hero.pos = new Vector2i(mx, my);
-                            hero.spawn = new Vector2i(mx, my);
+                            hero.pos = new Vector2i(x, y);
+                            hero.spawn = new Vector2i(x, y);
 
                             state.heroes[0] = hero;
-                            state.map[my].Add(true);
+                            state.map[y].Add(true);
 
                             break;
                         }
@@ -88,11 +95,11 @@ class Game
                             hero.gold = 0;
                             hero.id = 1;
                             hero.life = 100;
-                            hero.pos = new Vector2i(mx, my);
-                            hero.spawn = new Vector2i(mx, my);
+                            hero.pos = new Vector2i(x, y);
+                            hero.spawn = new Vector2i(x, y);
 
                             state.heroes[1] = hero;
-                            state.map[my].Add(true);
+                            state.map[y].Add(true);
 
                             break;
                         }
@@ -102,11 +109,11 @@ class Game
                             hero.gold = 0;
                             hero.id = 2;
                             hero.life = 100;
-                            hero.pos = new Vector2i(mx, my);
-                            hero.spawn = new Vector2i(mx, my);
+                            hero.pos = new Vector2i(x, y);
+                            hero.spawn = new Vector2i(x, y);
 
                             state.heroes[2] = hero;
-                            state.map[my].Add(true);
+                            state.map[y].Add(true);
 
                             break;
                         }
@@ -116,43 +123,41 @@ class Game
                             hero.gold = 0;
                             hero.id = 3;
                             hero.life = 100;
-                            hero.pos = new Vector2i(mx, my);
-                            hero.spawn = new Vector2i(mx, my);
+                            hero.pos = new Vector2i(x, y);
+                            hero.spawn = new Vector2i(x, y);
 
                             state.heroes[3] = hero;
-                            state.map[my].Add(true);
+                            state.map[y].Add(true);
 
                             break;
                         }
                     case 'T':
                         {
                             Tavern tavern = new Tavern();
-                            tavern.pos = new Vector2i(mx, my);
+                            tavern.pos = new Vector2i(x, y);
 
                             state.taverns.Add(tavern);
-                            state.map[my].Add(false);
+                            state.map[y].Add(false);
 
                             break;
                         }
                     case '#':
                         {
-                            state.map[my].Add(false);
+                            state.map[y].Add(false);
 
                             break;
                         }
                     case '.':
                         {
-                            state.map[my].Add(true);
+                            state.map[y].Add(true);
 
                             break;
                         }
                 }
             }
-
-            line = strReader.ReadLine();
-            my++;
         }
 
+        state.size = size;
         state.entityCount = state.heroes.Count + state.mines.Count;
 
         for (int i = 0; i < inputs.Count; i++)

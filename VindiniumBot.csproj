@@ -3818,6 +3818,8 @@
     <None Remove="maps\map2.txt" />
     <None Remove="maps\map3.txt" />
     <None Remove="matches\match3.txt" />
+    <None Remove="matches\match4.txt" />
+    <None Remove="maps\map4.txt" />
   </ItemGroup>
   <ItemGroup>
     
@@ -3833,5 +3835,7 @@
     <EmbeddedResource Include="maps\map2.txt" />
     <EmbeddedResource Include="maps\map3.txt" />
     <EmbeddedResource Include="matches\match3.txt" />
+    <EmbeddedResource Include="matches\match4.txt" />
+    <EmbeddedResource Include="maps\map4.txt" />
   </ItemGroup>
 </Project>

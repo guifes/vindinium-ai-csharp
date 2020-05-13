@@ -69,6 +69,8 @@ class Core : IPathfinder<Vector2i, Vector2i>
 
             mine.id = id;
             mine.pos = new Vector2i(x, y);
+
+            Console.Error.WriteLine(mine.pos);
         }
     }
 
