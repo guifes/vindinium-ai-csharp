@@ -62,6 +62,6 @@ public class ReplayBot : IInput
 
     public string Turn(int round, Entity[] entities)
     {
-        return rounds[round / 4];
+        return rounds[(round - 1) / 4];
     }
 }

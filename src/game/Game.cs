@@ -163,7 +163,7 @@ class Game
 
         PrintState();
 
-        for (state.round = 0; state.round < state.maxRound; state.round++)
+        for (state.round = 1; state.round <= state.maxRound; state.round++)
         {
             IInput input = inputs[state.turnId];
             
@@ -263,7 +263,7 @@ class Game
 
             // Print
 
-            Console.WriteLine("Hero " + turnHero.id + " action: " + action);
+            Console.WriteLine("On turn " + state.round + " Hero " + turnHero.id + " action: " + action);
             PrintState();
         }
     }
@@ -374,7 +374,7 @@ class Game
         
         Console.Write('\n');
 
-        Console.ReadLine();
+        //Console.ReadLine();
     }
 
     static void MoveHero(Hero hero, int x, int y)
@@ -406,14 +406,17 @@ class Game
             {
                 if (newPos.Equals(mine.pos))
                 {
-                    if(mine.id != hero.id && hero.life > 20)
+                    if(mine.id != hero.id)
                     {
-                        hero.life -= 20;
-                        mine.id = hero.id;
-                    }
-                    else
-                    {
-                        Die(hero);
+                        if (hero.life > 20)
+                        {
+                            hero.life -= 20;
+                            mine.id = hero.id;
+                        }
+                        else
+                        {
+                            Die(hero);
+                        }
                     }
                 }
             }
