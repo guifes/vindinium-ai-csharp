@@ -11,7 +11,7 @@ class Game
 
     static void Main(string[] args)
     {
-        string match = EmbeddedUtil.ReadTextFile("VindiniumBot.matches.match.txt");
+        string match = EmbeddedUtil.ReadTextFile("VindiniumBot.matches.match2.txt");
 
         List<IInput> inputs = new List<IInput>();
 
@@ -29,7 +29,7 @@ class Game
 
         state = new GameState(MAX_ROUNDS);
 
-        string mapInput = EmbeddedUtil.ReadTextFile("VindiniumBot.maps.map1.txt");
+        string mapInput = EmbeddedUtil.ReadTextFile("VindiniumBot.maps.map2.txt");
 
         StringReader strReader = new StringReader(mapInput);
 
@@ -263,6 +263,7 @@ class Game
 
             // Print
 
+            Console.WriteLine("Hero " + turnHero.id + " action: " + action);
             PrintState();
         }
     }

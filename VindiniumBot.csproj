@@ -18,7 +18,6 @@
     <Folder Include="src\common\pathfinding\" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="maps\map0.txt" />
     <None Remove="node_modules\glob2base\LICENSE" />
     <None Remove="node_modules\glob2base\index.js" />
     <None Remove="node_modules\glob2base\README.md" />
@@ -3731,7 +3730,6 @@
     <None Remove="node_modules\gulp-header\node_modules\lodash.template\index.js" />
     <None Remove="node_modules\gulp-header\node_modules\lodash.template\README.md" />
     <None Remove="node_modules\gulp-header\node_modules\lodash.template\package.json" />
-    <None Remove="maps\map1.txt" />
     <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\is-implemented.js" />
     <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\index.js" />
     <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\shim.js" />
@@ -3781,7 +3779,6 @@
     <None Remove="node_modules\es5-ext\string\#\%40%40iterator\index.js" />
     <None Remove="node_modules\es5-ext\string\#\%40%40iterator\shim.js" />
     <None Remove="node_modules\es5-ext\string\#\%40%40iterator\implement.js" />
-    <None Remove="matches\match.txt" />
     <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\is-implemented.js" />
     <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\index.js" />
     <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\shim.js" />
@@ -3798,13 +3795,39 @@
     <None Remove="node_modules\es5-ext\string\#\%40%40iterator\index.js" />
     <None Remove="node_modules\es5-ext\string\#\%40%40iterator\shim.js" />
     <None Remove="node_modules\es5-ext\string\#\%40%40iterator\implement.js" />
+    <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\is-implemented.js" />
+    <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\index.js" />
+    <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\shim.js" />
+    <None Remove="node_modules\es5-ext\test\array\#\%40%40iterator\implement.js" />
+    <None Remove="node_modules\es5-ext\test\string\#\%40%40iterator\is-implemented.js" />
+    <None Remove="node_modules\es5-ext\test\string\#\%40%40iterator\index.js" />
+    <None Remove="node_modules\es5-ext\test\string\#\%40%40iterator\shim.js" />
+    <None Remove="node_modules\es5-ext\test\string\#\%40%40iterator\implement.js" />
+    <None Remove="node_modules\es5-ext\array\#\%40%40iterator\is-implemented.js" />
+    <None Remove="node_modules\es5-ext\array\#\%40%40iterator\index.js" />
+    <None Remove="node_modules\es5-ext\array\#\%40%40iterator\shim.js" />
+    <None Remove="node_modules\es5-ext\array\#\%40%40iterator\implement.js" />
+    <None Remove="node_modules\es5-ext\string\#\%40%40iterator\is-implemented.js" />
+    <None Remove="node_modules\es5-ext\string\#\%40%40iterator\index.js" />
+    <None Remove="node_modules\es5-ext\string\#\%40%40iterator\shim.js" />
+    <None Remove="node_modules\es5-ext\string\#\%40%40iterator\implement.js" />
+    <None Remove="matches\match2.txt" />
+    <None Remove="matches\match1.txt" />
+    <None Remove="maps\map1.txt" />
+    <None Remove="maps\map0.txt" />
+    <None Remove="maps\map2.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="maps\map0.txt" />
-    <EmbeddedResource Include="maps\map1.txt" />
-    <EmbeddedResource Include="matches\match.txt" />
+    
   </ItemGroup>
   <ItemGroup>
     <None Include="src\bot\Entry.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="matches\match2.txt" />
+    <EmbeddedResource Include="matches\match1.txt" />
+    <EmbeddedResource Include="maps\map1.txt" />
+    <EmbeddedResource Include="maps\map0.txt" />
+    <EmbeddedResource Include="maps\map2.txt" />
   </ItemGroup>
 </Project>

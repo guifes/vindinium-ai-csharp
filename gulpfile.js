@@ -17,7 +17,7 @@ gulp.task('compile', function () {
     ])
         .pipe(modify((content, filePath, file) => {
 
-            const regex = /using.*\n/g;
+            const regex = /( *)using.*;( *)\n/g;
 
             const imports = content.match(regex);
 

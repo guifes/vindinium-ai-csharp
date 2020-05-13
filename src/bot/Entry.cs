@@ -4,6 +4,8 @@ public class Entry
 {
     static void Main(string[] args)
     {
+        int rounds = 1;
+
         IInput input = new Player();
 
         int size = int.Parse(Console.ReadLine());
@@ -37,7 +39,7 @@ public class Entry
                 entities[i].gold = int.Parse(inputs[5]); // the gold of a hero (-1 for mines)
             }
 
-            string action = input.Turn(entities);
+            string action = input.Turn(rounds++, entities);
 
             Console.WriteLine(action);
         }
