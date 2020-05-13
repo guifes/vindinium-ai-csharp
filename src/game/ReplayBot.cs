@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Collections.Generic;
+using System;
 
 public class ReplayBot : IInput
 {
@@ -22,20 +23,25 @@ public class ReplayBot : IInput
             switch(elements.Length)
             {
                 case 1:
-                    reader.ReadLine();
 
-                    round = int.Parse(elements[0]);
-
-                    int tround = ((round - 1) % 4) + 1;
-                    int tid = id + 1;
-
-                    if (tround == tid)
+                    try
                     {
-                        if (cmd[0] == "MOVE")
-                            rounds.Add(cmd[0] + " " + cmd[1] + " " + cmd[2]);
-                        else
-                            rounds.Add(cmd[0]);
+                        round = int.Parse(elements[0]);
+
+                        reader.ReadLine();
+
+                        int tround = ((round - 1) % 4) + 1;
+                        int tid = id + 1;
+
+                        if (tround == tid)
+                        {
+                            if (cmd[0] == "MOVE")
+                                rounds.Add(cmd[0] + " " + cmd[1] + " " + cmd[2]);
+                            else
+                                rounds.Add(cmd[0]);
+                        }
                     }
+                    catch(Exception e) {}
                     
                     break;
                 case 3:

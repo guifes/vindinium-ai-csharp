@@ -11,7 +11,7 @@ class Game
 
     static void Main(string[] args)
     {
-        string match = EmbeddedUtil.ReadTextFile("VindiniumBot.matches.match2.txt");
+        string match = EmbeddedUtil.ReadTextFile("VindiniumBot.matches.match3.txt");
 
         List<IInput> inputs = new List<IInput>();
 
@@ -29,7 +29,7 @@ class Game
 
         state = new GameState(MAX_ROUNDS);
 
-        string mapInput = EmbeddedUtil.ReadTextFile("VindiniumBot.maps.map2.txt");
+        string mapInput = EmbeddedUtil.ReadTextFile("VindiniumBot.maps.map3.txt");
 
         StringReader strReader = new StringReader(mapInput);
 
@@ -217,30 +217,35 @@ class Game
                     action = "WAIT";
             }
 
+            bool turnHeroDied = false;
+
             switch (action)
             {
                 case "WAIT": break;
-                case "EAST": MoveHero(turnHero, turnHero.pos.x + 1, turnHero.pos.y); break;
-                case "WEST": MoveHero(turnHero, turnHero.pos.x - 1, turnHero.pos.y);  break;
-                case "SOUTH": MoveHero(turnHero, turnHero.pos.x, turnHero.pos.y + 1); break;
-                case "NORTH": MoveHero(turnHero, turnHero.pos.x, turnHero.pos.y - 1);  break;
+                case "EAST": turnHeroDied = MoveHero(turnHero, turnHero.pos.x + 1, turnHero.pos.y); break;
+                case "WEST": turnHeroDied = MoveHero(turnHero, turnHero.pos.x - 1, turnHero.pos.y);  break;
+                case "SOUTH": turnHeroDied = MoveHero(turnHero, turnHero.pos.x, turnHero.pos.y + 1); break;
+                case "NORTH": turnHeroDied = MoveHero(turnHero, turnHero.pos.x, turnHero.pos.y - 1);  break;
             }
 
             // Fight
 
-            foreach(Hero hero in state.heroes)
+            if (!turnHeroDied)
             {
-                if (turnHero.id == hero.id) continue;
-
-                Vector2i distance = turnHero.pos - hero.pos;
-
-                if(distance.size == 1)
+                foreach (Hero hero in state.heroes)
                 {
-                    hero.life -= 20;
+                    if (turnHero.id == hero.id) continue;
 
-                    if(hero.life <= 0)
+                    Vector2i distance = turnHero.pos - hero.pos;
+
+                    if (distance.size == 1)
                     {
-                        Die(hero, turnHero);
+                        hero.life -= 20;
+
+                        if (hero.life <= 0)
+                        {
+                            Die(hero, turnHero);
+                        }
                     }
                 }
             }
@@ -377,7 +382,7 @@ class Game
         //Console.ReadLine();
     }
 
-    static void MoveHero(Hero hero, int x, int y)
+    static bool MoveHero(Hero hero, int x, int y)
     {
         Vector2i newPos = new Vector2i(x, y);
 
@@ -387,11 +392,17 @@ class Game
 
             if(newPos.Equals(iHero.pos))
             {
-                return;
+                return false;
             }
         }
 
-        if (!state.map[y][x])
+        if (
+            (newPos.x < 0) ||
+            (newPos.y < 0) ||
+            (newPos.x >= state.size) ||
+            (newPos.y >= state.size) ||
+            !state.map[newPos.y][newPos.x]
+        )
         {
             foreach(Tavern tavern in state.taverns)
             {
@@ -404,28 +415,29 @@ class Game
 
             foreach (Mine mine in state.mines)
             {
-                if (newPos.Equals(mine.pos))
+                if (newPos.Equals(mine.pos) && mine.id != hero.id)
                 {
-                    if(mine.id != hero.id)
+                    if (hero.life > 20)
                     {
-                        if (hero.life > 20)
-                        {
-                            hero.life -= 20;
-                            mine.id = hero.id;
-                        }
-                        else
-                        {
-                            Die(hero);
-                        }
+                        hero.life -= 20;
+                        mine.id = hero.id;
+                    }
+                    else
+                    {
+                        Die(hero);
+
+                        return true;
                     }
                 }
             }
 
-            return;
+            return false;
         }
 
         hero.pos.x = x;
         hero.pos.y = y;
+
+        return false;
     }
 
     static void Die(Hero hero, Hero killer = null)
@@ -447,7 +459,7 @@ class Game
 
             if(hero.pos.Equals(h.pos))
             {
-                Die(h);
+                Die(h, hero);
             }
         }
     }

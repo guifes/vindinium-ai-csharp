@@ -260,8 +260,11 @@ class Core : IPathfinder<Vector2i, Vector2i>
     public string StepTowards(Vector2i destination)
     {
         List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, destination);
-        Vector2i step = path[0] + myHero.pos;
-        return "MOVE " + step.x + " " + step.y;
+
+        if (path.Count > .0)
+            return Vector2iToDirection(path[0]);
+        else
+            return "WAIT";
     }
 
     public bool MapContains(Vector2i pos)
@@ -272,6 +275,19 @@ class Core : IPathfinder<Vector2i, Vector2i>
                (pos.y < size);
     }
 
+    string Vector2iToDirection(Vector2i v)
+    {
+        if (v.x > 0)
+            return "EAST";
+        else if (v.x < 0)
+            return "WEST";
+        else if (v.y > 0)
+            return "SOUTH";
+        else if (v.y < 0)
+            return "NORTH";
+
+        return "WAIT";
+    }
 
     /////////////////
     // IPathfinder //

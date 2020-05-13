@@ -40,6 +40,10 @@ public class GameState : IPathfinder<Vector2i, Vector2i>
         this.pathfinder = new AStarPathfinder<Vector2i, Vector2i>(this);
     }
 
+    /////////////////
+    // IPathfinder //
+    /////////////////
+
     public float Heuristic(Vector2i fromLocation, Vector2i toLocation)
     {
         Vector2i res = fromLocation - toLocation;
@@ -61,7 +65,7 @@ public class GameState : IPathfinder<Vector2i, Vector2i>
                 (newState.y < size) &&
                 (
                     map[newState.y][newState.x] ||
-                    newState == toState
+                    newState.Equals(toState)
                 )
             )
             {
