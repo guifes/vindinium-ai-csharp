@@ -46,6 +46,12 @@ class Core : IPathfinder<Vector2i, Vector2i>
 
         distanceToHero.Clear();
         blockedTiles.Clear();
+
+        if(round == 73)
+        {
+            System.Diagnostics.Debugger.Launch();
+        }
+                
     }
 
     public void UpdateEntity(string entityType, int id, int x, int y, int life, int gold)
@@ -124,7 +130,7 @@ class Core : IPathfinder<Vector2i, Vector2i>
                 Vector2i newPosition = myHero.pos + t;
                 bool isBlocked = false;
 
-                if (!(MapContains(newPosition) && map[newPosition.y][newPosition.x])) continue;
+                if (!IsWalkable(newPosition)) continue;
 
                 foreach (Hero hero in heroes)
                 {
@@ -142,7 +148,7 @@ class Core : IPathfinder<Vector2i, Vector2i>
                     Vector2i nearbyPosition = newPosition + t2;
 
                     if(nearbyPosition.Equals(myHero.pos)) continue;
-                    if (!(MapContains(nearbyPosition) && map[nearbyPosition.y][nearbyPosition.x])) continue;
+                    if (!IsWalkable(nearbyPosition)) continue;
 
                     foreach (Hero hero in heroes)
                     {
@@ -171,11 +177,11 @@ class Core : IPathfinder<Vector2i, Vector2i>
     {
         // (X) Go to nearest tavern if all mines claimed and heal when life <= 75
         // (X) Next to tavern and need healing, heal
-        // ( ) Avoid nearby enemies when they can kill me
+        // (X) Avoid nearby enemies when they can kill me
         // ( ) Avoid enemies near taverns
         // ( ) Avoid stepping into another player's spawn if this player can die in his next turn (life < 20 * nearby enemies)
         // (X) If needs healing, seek tavern
-        // ( ) Kill nearby enemies with at least 1 mine
+        // (X) Kill nearby enemies with at least 1 mine
         // ( ) Chase enemies with more than 1/4 of mines
 
         if(blockedTiles.Count > 0) Console.Error.WriteLine("Blocked Tiles:");
@@ -203,7 +209,8 @@ class Core : IPathfinder<Vector2i, Vector2i>
                 if (
                     distance == 1 &&
                     heroMines > 0 &&
-                    hero.life - myHero.life > 18 &&
+                    hero.life - myHero.life <= 18 &&
+                    IsWalkable(newPosition) &&
                     !blockedTiles.Contains(newPosition)
                 )
                 {
@@ -279,6 +286,11 @@ class Core : IPathfinder<Vector2i, Vector2i>
                (pos.y < size);
     }
 
+    bool IsWalkable(Vector2i pos)
+    {
+        return MapContains(pos) && map[pos.x][pos.y];
+    }
+
     string Vector2iToDirection(Vector2i v)
     {
         if (v.x > 0)
@@ -316,7 +328,7 @@ class Core : IPathfinder<Vector2i, Vector2i>
                 (
                     newState.Equals(toState) ||
                     (
-                        map[newState.y][newState.x] &&
+                        map[newState.x][newState.y] &&
                         !blockedTiles.Contains(newState)
                     )
                 )

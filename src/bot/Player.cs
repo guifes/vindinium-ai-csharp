@@ -14,17 +14,15 @@ public class Player : IInput
     {
         core.size = size;
 
-        for (int i = 0; i < size; i++)
+        for (int x = 0; x < size; x++)
         {
-            string line = map[i];
-
-            Console.Error.WriteLine(line);
-
             core.map.Add(new List<bool>());
 
-            for (int j = 0; j < line.Length; j++)
+            for (int y = 0; y < size; y++)
             {
-                char c = line[j];
+                string line = map[y];
+
+                char c = line[x];
 
                 switch (c)
                 {
@@ -34,7 +32,7 @@ public class Player : IInput
                     case '3':
                         {
                             Hero hero = new Hero();
-                            hero.spawn = new Vector2i(j, i);
+                            hero.spawn = new Vector2i(x, y);
 
                             core.heroes.Add(hero);
                             break;
@@ -42,7 +40,7 @@ public class Player : IInput
                     case 'T':
                         {
                             Tavern tavern = new Tavern();
-                            tavern.pos = new Vector2i(j, i);
+                            tavern.pos = new Vector2i(x, y);
 
                             core.taverns.Add(tavern);
                             break;
@@ -52,7 +50,7 @@ public class Player : IInput
                         break;
                 }
 
-                core.map[i].Add(c == '.' || c == '0' || c == '1' || c == '2' || c == '3');
+                core.map[x].Add(c == '.' || c == '0' || c == '1' || c == '2' || c == '3');
             }
         }
 

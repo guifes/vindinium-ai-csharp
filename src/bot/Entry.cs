@@ -14,7 +14,11 @@ public class Entry
 
         for (int i = 0; i < size; i++)
         {
-            map[i] = Console.ReadLine();
+            string line = Console.ReadLine();
+
+            Console.Error.WriteLine(line);
+
+            map[i] = line;
         }
 
         int myId = int.Parse(Console.ReadLine()); // ID of your hero

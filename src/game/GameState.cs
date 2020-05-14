@@ -64,7 +64,7 @@ public class GameState : IPathfinder<Vector2i, Vector2i>
                 (newState.x < size) &&
                 (newState.y < size) &&
                 (
-                    map[newState.y][newState.x] ||
+                    map[newState.x][newState.y] ||
                     newState.Equals(toState)
                 )
             )
