@@ -15,6 +15,7 @@ class Core : IPathfinder<Vector2i, Vector2i>
     public Mine nearestUnclaimedMine;
     public int size;
     public int myId;
+    public int round;
     
     private int mineCount = 0;
 
@@ -69,8 +70,6 @@ class Core : IPathfinder<Vector2i, Vector2i>
 
             mine.id = id;
             mine.pos = new Vector2i(x, y);
-
-            Console.Error.WriteLine(mine.pos);
         }
     }
 
@@ -82,8 +81,7 @@ class Core : IPathfinder<Vector2i, Vector2i>
             {
                 if (hero.id == myHero.id) continue;
 
-                List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, hero.pos);
-                distanceToHero[hero.pos] = path.Count - 1;
+                distanceToHero[hero.pos] = GetDistanceBetween(myHero.pos, hero.pos);
             }
         }
 
@@ -91,8 +89,7 @@ class Core : IPathfinder<Vector2i, Vector2i>
         {
             foreach (Tavern tavern in taverns)
             {
-                List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, tavern.pos);
-                distanceToHero[tavern.pos] = path.Count - 1;
+                distanceToHero[tavern.pos] = GetDistanceBetween(myHero.pos, tavern.pos);
 
                 if (nearestTavern == null || distanceToHero[tavern.pos] < distanceToHero[nearestTavern.pos])
                 {
@@ -105,14 +102,13 @@ class Core : IPathfinder<Vector2i, Vector2i>
         {
             foreach (Mine mine in mines)
             {
-                List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, mine.pos);
-                distanceToHero[mine.pos] = path.Count - 1;
+                distanceToHero[mine.pos] = GetDistanceBetween(myHero.pos, mine.pos);
 
                 if (
                     mine.id != myId &&
                     (
                         nearestUnclaimedMine == null ||
-                        distanceToHero[mine.pos]< distanceToHero[nearestUnclaimedMine.pos]
+                        distanceToHero[mine.pos] < distanceToHero[nearestUnclaimedMine.pos]
                     )
                 )
                 {
@@ -143,7 +139,7 @@ class Core : IPathfinder<Vector2i, Vector2i>
 
                 foreach(Vector2i t2 in transitions)
                 {
-                    Vector2i nearbyPosition = newPosition + t;
+                    Vector2i nearbyPosition = newPosition + t2;
 
                     if(nearbyPosition.Equals(myHero.pos)) continue;
                     if (!(MapContains(nearbyPosition) && map[nearbyPosition.y][nearbyPosition.x])) continue;
@@ -154,12 +150,12 @@ class Core : IPathfinder<Vector2i, Vector2i>
 
                         if (
                             (
-                                hero.pos.Equals(newPosition) &&
+                                hero.pos.Equals(nearbyPosition) &&
                                 hero.life - myHero.life > 18
                             ) ||
                             (
                                 distance == 1 &&
-                                myHero.life - hero.life > 2
+                                myHero.life - hero.life <= 2
                             )
                         )
                         {
@@ -259,7 +255,13 @@ class Core : IPathfinder<Vector2i, Vector2i>
         }
     }
 
-    public string StepTowards(Vector2i destination)
+    int GetDistanceBetween(Vector2i origin, Vector2i destination)
+    {
+        List<Vector2i> path = pathfinder.getShortestPath(origin, destination);
+        return path.Count > 0 ? path.Count - 1 : 9999;
+    }
+
+    string StepTowards(Vector2i destination)
     {
         List<Vector2i> path = pathfinder.getShortestPath(myHero.pos, destination);
 
@@ -269,7 +271,7 @@ class Core : IPathfinder<Vector2i, Vector2i>
             return "WAIT";
     }
 
-    public bool MapContains(Vector2i pos)
+    bool MapContains(Vector2i pos)
     {
         return (pos.x >= 0) &&
                (pos.y >= 0) &&

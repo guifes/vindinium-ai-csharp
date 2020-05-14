@@ -61,6 +61,8 @@ public class Player : IInput
 
     public string Turn(int round, Entity[] entities)
     {
+        core.round = round;
+
         core.StartTurn();
         
         for (int i = 0; i < entities.Length; i++)

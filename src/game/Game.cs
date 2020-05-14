@@ -71,8 +71,6 @@ class Game
                             state.mines.Add(mine);
                             state.map[y].Add(false);
 
-                            Console.Error.WriteLine(mine.pos);
-
                             break;
                         }
                     case '0':
