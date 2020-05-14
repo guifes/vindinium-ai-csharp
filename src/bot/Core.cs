@@ -81,6 +81,55 @@ class Core : IPathfinder<Vector2i, Vector2i>
 
     public void Process()
     {
+        // Processing possible movements
+        {
+            foreach (Vector2i t in transitions)
+            {
+                Vector2i newPosition = myHero.pos + t;
+                bool isBlocked = false;
+
+                if (!IsWalkable(newPosition)) continue;
+
+                foreach (Hero hero in heroes)
+                {
+                    if (hero.pos.Equals(newPosition))
+                    {
+                        blockedTiles.Add(newPosition);
+                        isBlocked = true;
+                    }
+                }
+
+                if (isBlocked) continue;
+
+                foreach (Vector2i t2 in transitions)
+                {
+                    Vector2i nearbyPosition = newPosition + t2;
+
+                    if (nearbyPosition.Equals(myHero.pos)) continue;
+                    if (!IsWalkable(nearbyPosition)) continue;
+
+                    foreach (Hero hero in heroes)
+                    {
+                        int distance = (hero.pos - nearbyPosition).size;
+
+                        if (
+                            (
+                                hero.pos.Equals(nearbyPosition) &&
+                                hero.life - myHero.life > 18
+                            ) ||
+                            (
+                                distance == 1 &&
+                                myHero.life - hero.life <= 2
+                            )
+                        )
+                        {
+                            blockedTiles.Add(newPosition);
+                        }
+                    }
+                }
+            }
+        }
+
         // Processing heroes
         {
             foreach(Hero hero in heroes)
@@ -119,55 +168,6 @@ class Core : IPathfinder<Vector2i, Vector2i>
                 )
                 {
                     nearestUnclaimedMine = mine;
-                }
-            }
-        }
-
-        // Processing possible movements
-        {
-            foreach(Vector2i t in transitions)
-            {
-                Vector2i newPosition = myHero.pos + t;
-                bool isBlocked = false;
-
-                if (!IsWalkable(newPosition)) continue;
-
-                foreach (Hero hero in heroes)
-                {
-                    if(hero.pos.Equals(newPosition))
-                    {
-                        blockedTiles.Add(newPosition);
-                        isBlocked = true;
-                    }
-                }
-
-                if (isBlocked) continue;
-
-                foreach(Vector2i t2 in transitions)
-                {
-                    Vector2i nearbyPosition = newPosition + t2;
-
-                    if(nearbyPosition.Equals(myHero.pos)) continue;
-                    if (!IsWalkable(nearbyPosition)) continue;
-
-                    foreach (Hero hero in heroes)
-                    {
-                        int distance = (hero.pos - nearbyPosition).size;
-
-                        if (
-                            (
-                                hero.pos.Equals(nearbyPosition) &&
-                                hero.life - myHero.life > 18
-                            ) ||
-                            (
-                                distance == 1 &&
-                                myHero.life - hero.life <= 2
-                            )
-                        )
-                        {
-                            blockedTiles.Add(newPosition);
-                        }
-                    }
                 }
             }
         }

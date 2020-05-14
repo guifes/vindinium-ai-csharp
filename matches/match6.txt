@@ -1,0 +1,1806 @@
+﻿Standard Output Stream:
+SOUTH
+001
+600
+Standard Output Stream:
+MOVE 5 20 2
+002
+600
+Standard Output Stream:
+MOVE 18 3
+003
+600
+Standard Output Stream:
+MOVE 18 20
+004
+600
+Standard Output Stream:
+MOVE 5 20 1
+006
+600
+Standard Output Stream:
+MOVE 18 3
+007
+600
+Standard Output Stream:
+MOVE 18 20
+008
+600
+009
+600
+Standard Output Stream:
+MOVE 5 19 2
+010
+600
+Standard Output Stream:
+MOVE 18 4
+011
+600
+Standard Output Stream:
+MOVE 18 19
+012
+600
+Standard Output Stream:
+MOVE 3 23 3
+014
+600
+Standard Output Stream:
+MOVE 18 4
+015
+600
+Standard Output Stream:
+MOVE 18 19
+016
+600
+Standard Output Stream:
+MOVE 3 23 2
+018
+600
+Standard Output Stream:
+MOVE 20 0
+019
+600
+Standard Output Stream:
+MOVE 20 23
+020
+600
+Standard Output Stream:
+MOVE 3 23 1
+022
+600
+Standard Output Stream:
+MOVE 20 0
+023
+600
+Standard Output Stream:
+MOVE 20 23
+024
+600
+Standard Output Stream:
+MOVE 1 21 3
+026
+600
+Standard Output Stream:
+MOVE 22 2
+027
+600
+Standard Output Stream:
+MOVE 14 12
+028
+600
+Standard Output Stream:
+MOVE 1 21 2
+030
+600
+Standard Output Stream:
+MOVE 22 2
+031
+600
+Standard Output Stream:
+MOVE 14 12
+032
+600
+Standard Output Stream:
+MOVE 1 21 1
+034
+600
+Standard Output Stream:
+MOVE 22 2
+035
+600
+Standard Output Stream:
+MOVE 14 12
+036
+600
+Standard Output Stream:
+MOVE 1 19 3
+038
+600
+Standard Output Stream:
+MOVE 22 4
+039
+600
+Standard Output Stream:
+MOVE 14 12
+040
+600
+Standard Output Stream:
+MOVE 1 19 2
+042
+600
+Standard Output Stream:
+MOVE 22 4
+043
+600
+Standard Output Stream:
+MOVE 14 12
+044
+600
+Standard Output Stream:
+MOVE 1 19 1
+046
+600
+Standard Output Stream:
+MOVE 22 4
+047
+600
+Standard Output Stream:
+MOVE 14 12
+048
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+050
+600
+Standard Output Stream:
+MOVE 14 11
+051
+600
+Standard Output Stream:
+MOVE 14 12
+052
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+054
+600
+Standard Output Stream:
+MOVE 14 11
+055
+600
+Standard Output Stream:
+MOVE 14 12
+056
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+058
+600
+Standard Output Stream:
+MOVE 14 11
+059
+600
+Standard Output Stream:
+MOVE 14 12
+060
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+062
+600
+Standard Output Stream:
+MOVE 14 11
+063
+600
+Standard Output Stream:
+MOVE 14 12
+064
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+066
+600
+Standard Output Stream:
+MOVE 14 11
+067
+600
+Standard Output Stream:
+MOVE 14 12
+068
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+070
+600
+Standard Output Stream:
+MOVE 14 11
+071
+600
+Standard Output Stream:
+MOVE 14 12
+072
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+074
+600
+Standard Output Stream:
+MOVE 14 11
+075
+600
+Standard Output Stream:
+MOVE 14 12
+076
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+078
+600
+Standard Output Stream:
+MOVE 14 11
+079
+600
+Standard Output Stream:
+MOVE 14 12
+080
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+082
+600
+Standard Output Stream:
+MOVE 14 11
+083
+600
+Standard Output Stream:
+MOVE 14 12
+084
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+086
+600
+Standard Output Stream:
+MOVE 14 11
+087
+600
+Standard Output Stream:
+MOVE 14 12
+088
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+090
+600
+Standard Output Stream:
+MOVE 14 11
+091
+600
+Standard Output Stream:
+MOVE 14 12
+092
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+094
+600
+Standard Output Stream:
+MOVE 14 11
+095
+600
+Standard Output Stream:
+MOVE 14 12
+096
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+098
+600
+Standard Output Stream:
+MOVE 14 11
+099
+600
+Standard Output Stream:
+MOVE 14 12
+100
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+102
+600
+Standard Output Stream:
+MOVE 14 11
+103
+600
+Standard Output Stream:
+MOVE 14 12
+104
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+106
+600
+Standard Output Stream:
+MOVE 14 11
+107
+600
+Standard Output Stream:
+MOVE 14 12
+108
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+110
+600
+Standard Output Stream:
+MOVE 14 11
+111
+600
+Standard Output Stream:
+MOVE 14 12
+112
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+114
+600
+Standard Output Stream:
+MOVE 14 11
+115
+600
+Standard Output Stream:
+MOVE 14 12
+116
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+118
+600
+Standard Output Stream:
+MOVE 14 11
+119
+600
+Standard Output Stream:
+MOVE 14 12
+120
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+122
+600
+Standard Output Stream:
+MOVE 14 11
+123
+600
+Standard Output Stream:
+MOVE 13 14
+124
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+126
+600
+Standard Output Stream:
+MOVE 14 11
+127
+600
+Standard Output Stream:
+MOVE 16 12
+128
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+130
+600
+Standard Output Stream:
+MOVE 14 11
+131
+600
+Standard Output Stream:
+MOVE 16 12
+132
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+134
+600
+Standard Output Stream:
+MOVE 14 11
+135
+600
+Standard Output Stream:
+MOVE 16 11
+136
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+138
+600
+Standard Output Stream:
+MOVE 13 9
+139
+600
+Standard Output Stream:
+MOVE 17 15
+140
+600
+Standard Output Stream:
+MOVE 10 14 2
+142
+600
+Standard Output Stream:
+MOVE 16 11
+143
+600
+Standard Output Stream:
+MOVE 17 15
+144
+600
+Standard Output Stream:
+MOVE 7 12 2
+146
+600
+Standard Output Stream:
+MOVE 16 11
+147
+600
+Standard Output Stream:
+MOVE 14 12
+148
+600
+Standard Output Stream:
+MOVE 7 12 1
+150
+600
+Standard Output Stream:
+MOVE 16 12
+151
+600
+Standard Output Stream:
+MOVE 14 12
+152
+600
+Standard Output Stream:
+MOVE 7 11 2
+154
+600
+Standard Output Stream:
+MOVE 17 8
+155
+600
+Standard Output Stream:
+MOVE 14 12
+156
+600
+Standard Output Stream:
+MOVE 4 13 2
+158
+600
+Standard Output Stream:
+MOVE 17 8
+159
+600
+Standard Output Stream:
+MOVE 14 12
+160
+600
+Standard Output Stream:
+MOVE 7 11 2
+162
+600
+Standard Output Stream:
+MOVE 14 11
+163
+600
+Standard Output Stream:
+MOVE 14 12
+164
+600
+Standard Output Stream:
+MOVE 4 13 2
+166
+600
+Standard Output Stream:
+MOVE 14 11
+167
+600
+Standard Output Stream:
+MOVE 13 14
+168
+600
+Standard Output Stream:
+MOVE 7 11 2
+170
+600
+Standard Output Stream:
+MOVE 14 11
+171
+600
+Standard Output Stream:
+MOVE 13 14
+172
+600
+Standard Output Stream:
+MOVE 4 13 2
+174
+600
+Standard Output Stream:
+MOVE 14 11
+175
+600
+Standard Output Stream:
+MOVE 13 14
+176
+600
+Standard Output Stream:
+MOVE 7 11 2
+178
+600
+Standard Output Stream:
+MOVE 14 11
+179
+600
+Standard Output Stream:
+MOVE 13 14
+180
+600
+Standard Output Stream:
+MOVE 4 13 2
+182
+600
+Standard Output Stream:
+MOVE 14 11
+183
+600
+Standard Output Stream:
+MOVE 13 14
+184
+600
+Standard Output Stream:
+MOVE 7 11 2
+186
+600
+Standard Output Stream:
+MOVE 13 9
+187
+600
+Standard Output Stream:
+MOVE 13 14
+188
+600
+Standard Output Stream:
+MOVE 4 13 2
+190
+600
+Standard Output Stream:
+MOVE 13 9
+191
+600
+Standard Output Stream:
+MOVE 14 12
+192
+600
+Standard Output Stream:
+MOVE 7 11 2
+194
+600
+Standard Output Stream:
+MOVE 13 9
+195
+600
+Standard Output Stream:
+MOVE 14 12
+196
+600
+Standard Output Stream:
+MOVE 4 13 2
+198
+600
+Standard Output Stream:
+MOVE 13 9
+199
+600
+Standard Output Stream:
+MOVE 14 12
+200
+600
+Standard Output Stream:
+MOVE 7 11 2
+202
+600
+Standard Output Stream:
+MOVE 13 9
+203
+600
+Standard Output Stream:
+MOVE 14 12
+204
+600
+Standard Output Stream:
+MOVE 4 13 2
+206
+600
+Standard Output Stream:
+MOVE 13 9
+207
+600
+Standard Output Stream:
+MOVE 14 12
+208
+600
+Standard Output Stream:
+MOVE 7 11 2
+210
+600
+Standard Output Stream:
+MOVE 10 9
+211
+600
+Standard Output Stream:
+MOVE 14 12
+212
+600
+Standard Output Stream:
+MOVE 4 13 2
+214
+600
+Standard Output Stream:
+MOVE 10 9
+215
+600
+Standard Output Stream:
+MOVE 16 11
+216
+600
+Standard Output Stream:
+MOVE 7 11 2
+218
+600
+Standard Output Stream:
+MOVE 10 9
+219
+600
+Standard Output Stream:
+MOVE 16 11
+220
+600
+Standard Output Stream:
+MOVE 4 13 2
+222
+600
+Standard Output Stream:
+MOVE 10 9
+223
+600
+Standard Output Stream:
+MOVE 16 11
+224
+600
+Standard Output Stream:
+MOVE 7 11 2
+226
+600
+Standard Output Stream:
+MOVE 10 9
+227
+600
+Standard Output Stream:
+MOVE 19 13
+228
+600
+Standard Output Stream:
+MOVE 4 13 2
+230
+600
+Standard Output Stream:
+MOVE 10 9
+231
+600
+Standard Output Stream:
+MOVE 17 17
+232
+600
+Standard Output Stream:
+MOVE 7 11 2
+234
+600
+Standard Output Stream:
+MOVE 6 8
+235
+600
+Standard Output Stream:
+MOVE 16 11
+236
+600
+Standard Output Stream:
+MOVE 4 13 2
+238
+600
+Standard Output Stream:
+MOVE 6 8
+239
+600
+Standard Output Stream:
+MOVE 16 11
+240
+600
+Standard Output Stream:
+MOVE 7 11 2
+242
+600
+Standard Output Stream:
+MOVE 6 8
+243
+600
+Standard Output Stream:
+MOVE 19 13
+244
+600
+Standard Output Stream:
+MOVE 4 13 2
+246
+600
+Standard Output Stream:
+MOVE 6 8
+247
+600
+Standard Output Stream:
+MOVE 17 17
+248
+600
+Standard Output Stream:
+MOVE 7 11 2
+250
+600
+Standard Output Stream:
+MOVE 9 11
+251
+600
+Standard Output Stream:
+MOVE 16 11
+252
+600
+Standard Output Stream:
+MOVE 4 13 2
+254
+600
+Standard Output Stream:
+MOVE 9 11
+255
+600
+Standard Output Stream:
+MOVE 16 11
+256
+600
+Standard Output Stream:
+MOVE 7 11 2
+258
+600
+Standard Output Stream:
+MOVE 9 11
+259
+600
+Standard Output Stream:
+MOVE 19 13
+260
+600
+Standard Output Stream:
+MOVE 4 13 2
+262
+600
+Standard Output Stream:
+MOVE 9 11
+263
+600
+Standard Output Stream:
+MOVE 17 17
+264
+600
+Standard Output Stream:
+MOVE 7 11 2
+266
+600
+Standard Output Stream:
+MOVE 9 11
+267
+600
+Standard Output Stream:
+MOVE 16 11
+268
+600
+Standard Output Stream:
+MOVE 4 13 2
+270
+600
+Standard Output Stream:
+MOVE 9 11
+271
+600
+Standard Output Stream:
+MOVE 16 11
+272
+600
+Standard Output Stream:
+MOVE 7 11 2
+274
+600
+Standard Output Stream:
+MOVE 7 11
+275
+600
+Standard Output Stream:
+MOVE 19 13
+276
+600
+Standard Output Stream:
+MOVE 4 13 2
+278
+600
+Standard Output Stream:
+MOVE 7 11
+279
+600
+Standard Output Stream:
+MOVE 17 17
+280
+600
+Standard Output Stream:
+MOVE 7 11 2
+282
+600
+Standard Output Stream:
+MOVE 7 11
+283
+600
+Standard Output Stream:
+MOVE 16 11
+284
+600
+Standard Output Stream:
+MOVE 4 13 2
+286
+600
+Standard Output Stream:
+MOVE 7 12
+287
+600
+Standard Output Stream:
+MOVE 16 11
+288
+600
+Standard Output Stream:
+MOVE 7 11 2
+290
+600
+Standard Output Stream:
+MOVE 4 10
+291
+600
+Standard Output Stream:
+MOVE 19 13
+292
+600
+Standard Output Stream:
+MOVE 4 13 2
+294
+600
+Standard Output Stream:
+MOVE 4 8
+295
+600
+Standard Output Stream:
+MOVE 17 17
+296
+600
+Standard Output Stream:
+MOVE 7 11 2
+298
+600
+Standard Output Stream:
+MOVE 7 12
+299
+600
+Standard Output Stream:
+MOVE 16 11
+300
+600
+Standard Output Stream:
+MOVE 4 13 2
+302
+600
+Standard Output Stream:
+MOVE 7 12
+303
+600
+Standard Output Stream:
+MOVE 16 11
+304
+600
+Standard Output Stream:
+MOVE 7 11 2
+306
+600
+Standard Output Stream:
+MOVE 4 10
+307
+600
+Standard Output Stream:
+MOVE 19 13
+308
+600
+Standard Output Stream:
+MOVE 4 13 2
+310
+600
+Standard Output Stream:
+MOVE 4 8
+311
+600
+Standard Output Stream:
+MOVE 17 17
+312
+600
+Standard Output Stream:
+MOVE 7 11 2
+314
+600
+Standard Output Stream:
+MOVE 7 12
+315
+600
+Standard Output Stream:
+MOVE 16 11
+316
+600
+Standard Output Stream:
+MOVE 4 13 2
+318
+600
+Standard Output Stream:
+MOVE 7 12
+319
+600
+Standard Output Stream:
+MOVE 16 11
+320
+600
+Standard Output Stream:
+MOVE 7 11 2
+322
+600
+Standard Output Stream:
+MOVE 4 10
+323
+600
+Standard Output Stream:
+MOVE 19 13
+324
+600
+Standard Output Stream:
+MOVE 4 13 2
+326
+600
+Standard Output Stream:
+MOVE 4 8
+327
+600
+Standard Output Stream:
+MOVE 17 17
+328
+600
+Standard Output Stream:
+MOVE 7 11 2
+330
+600
+Standard Output Stream:
+MOVE 7 12
+331
+600
+Standard Output Stream:
+MOVE 16 11
+332
+600
+Standard Output Stream:
+MOVE 4 13 2
+334
+600
+Standard Output Stream:
+MOVE 7 12
+335
+600
+Standard Output Stream:
+MOVE 16 11
+336
+600
+Standard Output Stream:
+MOVE 7 11 2
+338
+600
+Standard Output Stream:
+MOVE 4 10
+339
+600
+Standard Output Stream:
+MOVE 19 13
+340
+600
+Standard Output Stream:
+MOVE 4 13 2
+342
+600
+Standard Output Stream:
+MOVE 4 8
+343
+600
+Standard Output Stream:
+MOVE 17 17
+344
+600
+Standard Output Stream:
+MOVE 7 11 2
+346
+600
+Standard Output Stream:
+MOVE 7 12
+347
+600
+Standard Output Stream:
+MOVE 16 11
+348
+600
+Standard Output Stream:
+MOVE 4 13 2
+350
+600
+Standard Output Stream:
+MOVE 7 12
+351
+600
+Standard Output Stream:
+MOVE 16 11
+352
+600
+Standard Output Stream:
+MOVE 7 11 2
+354
+600
+Standard Output Stream:
+MOVE 4 10
+355
+600
+Standard Output Stream:
+MOVE 19 13
+356
+600
+Standard Output Stream:
+MOVE 4 13 2
+358
+600
+Standard Output Stream:
+MOVE 4 8
+359
+600
+Standard Output Stream:
+MOVE 17 17
+360
+600
+Standard Output Stream:
+MOVE 7 11 2
+362
+600
+Standard Output Stream:
+MOVE 7 12
+363
+600
+Standard Output Stream:
+MOVE 16 11
+364
+600
+Standard Output Stream:
+MOVE 4 13 2
+366
+600
+Standard Output Stream:
+MOVE 7 12
+367
+600
+Standard Output Stream:
+MOVE 16 11
+368
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+370
+600
+Standard Output Stream:
+MOVE 4 10
+371
+600
+Standard Output Stream:
+MOVE 19 13
+372
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+374
+600
+Standard Output Stream:
+MOVE 4 8
+375
+600
+Standard Output Stream:
+MOVE 17 17
+376
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+378
+600
+Standard Output Stream:
+MOVE 7 12
+379
+600
+Standard Output Stream:
+MOVE 16 11
+380
+600
+Standard Output Stream:
+MOVE 9 12 Thirsty
+382
+600
+Standard Output Stream:
+MOVE 7 12
+383
+600
+Standard Output Stream:
+MOVE 16 11
+384
+600
+Standard Output Stream:
+MOVE 10 14 2
+386
+600
+Standard Output Stream:
+MOVE 4 10
+387
+600
+Standard Output Stream:
+MOVE 14 12
+388
+600
+Standard Output Stream:
+MOVE 7 11 3
+390
+600
+Standard Output Stream:
+MOVE 4 8
+391
+600
+Standard Output Stream:
+MOVE 14 12
+392
+600
+Standard Output Stream:
+MOVE 7 11 2
+394
+600
+Standard Output Stream:
+MOVE 7 12
+395
+600
+Standard Output Stream:
+MOVE 14 12
+396
+600
+Standard Output Stream:
+MOVE 4 13 2
+398
+600
+Standard Output Stream:
+MOVE 7 12
+399
+600
+Standard Output Stream:
+MOVE 14 12
+400
+600
+Standard Output Stream:
+MOVE 7 11 2
+402
+600
+Standard Output Stream:
+MOVE 4 10
+403
+600
+Standard Output Stream:
+MOVE 16 11
+404
+600
+Standard Output Stream:
+MOVE 4 13 2
+406
+600
+Standard Output Stream:
+MOVE 4 8
+407
+600
+Standard Output Stream:
+MOVE 16 11
+408
+600
+Standard Output Stream:
+MOVE 7 11 2
+410
+600
+Standard Output Stream:
+MOVE 7 12
+411
+600
+Standard Output Stream:
+MOVE 16 11
+412
+600
+Standard Output Stream:
+MOVE 4 13 2
+414
+600
+Standard Output Stream:
+MOVE 7 12
+415
+600
+Standard Output Stream:
+MOVE 19 13
+416
+600
+Standard Output Stream:
+MOVE 7 11 2
+418
+600
+Standard Output Stream:
+MOVE 4 10
+419
+600
+Standard Output Stream:
+MOVE 17 17
+420
+600
+Standard Output Stream:
+MOVE 4 13 2
+422
+600
+Standard Output Stream:
+MOVE 4 8
+423
+600
+Standard Output Stream:
+MOVE 16 11
+424
+600
+Standard Output Stream:
+MOVE 7 11 2
+426
+600
+Standard Output Stream:
+MOVE 7 12
+427
+600
+Standard Output Stream:
+MOVE 16 11
+428
+600
+Standard Output Stream:
+MOVE 4 13 2
+430
+600
+Standard Output Stream:
+MOVE 7 12
+431
+600
+Standard Output Stream:
+MOVE 19 13
+432
+600
+Standard Output Stream:
+MOVE 7 11 2
+434
+600
+Standard Output Stream:
+MOVE 4 10
+435
+600
+Standard Output Stream:
+MOVE 17 17
+436
+600
+Standard Output Stream:
+MOVE 4 13 2
+438
+600
+Standard Output Stream:
+MOVE 4 8
+439
+600
+Standard Output Stream:
+MOVE 16 11
+440
+600
+Standard Output Stream:
+MOVE 7 11 2
+442
+600
+Standard Output Stream:
+MOVE 7 12
+443
+600
+Standard Output Stream:
+MOVE 16 11
+444
+600
+Standard Output Stream:
+MOVE 4 13 2
+446
+600
+Standard Output Stream:
+MOVE 7 12
+447
+600
+Standard Output Stream:
+MOVE 19 13
+448
+600
+Standard Output Stream:
+MOVE 7 11 2
+450
+600
+Standard Output Stream:
+MOVE 4 10
+451
+600
+Standard Output Stream:
+MOVE 17 17
+452
+600
+Standard Output Stream:
+MOVE 4 13 2
+454
+600
+Standard Output Stream:
+MOVE 4 8
+455
+600
+Standard Output Stream:
+MOVE 16 11
+456
+600
+Standard Output Stream:
+MOVE 7 11 2
+458
+600
+Standard Output Stream:
+MOVE 7 12
+459
+600
+Standard Output Stream:
+MOVE 16 11
+460
+600
+Standard Output Stream:
+MOVE 4 13 2
+462
+600
+Standard Output Stream:
+MOVE 7 12
+463
+600
+Standard Output Stream:
+MOVE 19 13
+464
+600
+Standard Output Stream:
+MOVE 7 11 2
+466
+600
+Standard Output Stream:
+MOVE 4 10
+467
+600
+Standard Output Stream:
+MOVE 17 17
+468
+600
+Standard Output Stream:
+MOVE 4 13 2
+470
+600
+Standard Output Stream:
+MOVE 4 8
+471
+600
+Standard Output Stream:
+MOVE 16 11
+472
+600
+Standard Output Stream:
+MOVE 7 11 2
+474
+600
+Standard Output Stream:
+MOVE 7 12
+475
+600
+Standard Output Stream:
+MOVE 16 11
+476
+600
+Standard Output Stream:
+MOVE 4 13 2
+478
+600
+Standard Output Stream:
+MOVE 7 12
+479
+600
+Standard Output Stream:
+MOVE 19 13
+480
+600
+Standard Output Stream:
+MOVE 7 11 2
+482
+600
+Standard Output Stream:
+MOVE 4 10
+483
+600
+Standard Output Stream:
+MOVE 17 17
+484
+600
+Standard Output Stream:
+MOVE 4 13 2
+486
+600
+Standard Output Stream:
+MOVE 4 8
+487
+600
+Standard Output Stream:
+MOVE 16 11
+488
+600
+Standard Output Stream:
+MOVE 7 11 2
+490
+600
+Standard Output Stream:
+MOVE 7 12
+491
+600
+Standard Output Stream:
+MOVE 16 11
+492
+600
+Standard Output Stream:
+MOVE 4 13 2
+494
+600
+Standard Output Stream:
+MOVE 7 12
+495
+600
+Standard Output Stream:
+MOVE 19 13
+496
+600
+Standard Output Stream:
+MOVE 7 11 2
+498
+600
+Standard Output Stream:
+MOVE 4 10
+499
+600
+Standard Output Stream:
+MOVE 17 17
+500
+600
+Standard Output Stream:
+MOVE 4 13 2
+502
+600
+Standard Output Stream:
+MOVE 9 11
+503
+600
+Standard Output Stream:
+MOVE 16 11
+504
+600
+Standard Output Stream:
+MOVE 7 11 2
+506
+600
+Standard Output Stream:
+MOVE 9 11
+507
+600
+Standard Output Stream:
+MOVE 16 11
+508
+600
+Standard Output Stream:
+MOVE 4 13 2
+510
+600
+Standard Output Stream:
+MOVE 9 11
+511
+600
+Standard Output Stream:
+MOVE 19 13
+512
+600
+Standard Output Stream:
+MOVE 7 11 2
+514
+600
+Standard Output Stream:
+MOVE 9 11
+515
+600
+Standard Output Stream:
+MOVE 17 17
+516
+600
+Standard Output Stream:
+MOVE 4 13 2
+518
+600
+Standard Output Stream:
+MOVE 9 11
+519
+600
+Standard Output Stream:
+MOVE 16 11
+520
+600
+Standard Output Stream:
+MOVE 7 11 2
+522
+600
+Standard Output Stream:
+MOVE 9 11
+523
+600
+Standard Output Stream:
+MOVE 16 11
+524
+600
+Standard Output Stream:
+MOVE 4 13 2
+526
+600
+Standard Output Stream:
+MOVE 7 12
+527
+600
+Standard Output Stream:
+MOVE 19 13
+528
+600
+Standard Output Stream:
+MOVE 7 11 2
+530
+600
+Standard Output Stream:
+MOVE 7 12
+531
+600
+Standard Output Stream:
+MOVE 17 17
+532
+600
+Standard Output Stream:
+MOVE 4 13 2
+534
+600
+Standard Output Stream:
+MOVE 7 12
+535
+600
+Standard Output Stream:
+MOVE 16 11
+536
+600
+Standard Output Stream:
+MOVE 7 11 2
+538
+600
+Standard Output Stream:
+MOVE 4 10
+539
+600
+Standard Output Stream:
+MOVE 16 11
+540
+600
+Standard Output Stream:
+MOVE 4 13 2
+542
+600
+Standard Output Stream:
+MOVE 4 8
+543
+600
+Standard Output Stream:
+MOVE 19 13
+544
+600
+Standard Output Stream:
+MOVE 7 11 2
+546
+600
+Standard Output Stream:
+MOVE 7 12
+547
+600
+Standard Output Stream:
+MOVE 17 17
+548
+600
+Standard Output Stream:
+MOVE 4 13 2
+550
+600
+Standard Output Stream:
+MOVE 7 12
+551
+600
+Standard Output Stream:
+MOVE 16 11
+552
+600
+Standard Output Stream:
+MOVE 7 11 2
+554
+600
+Standard Output Stream:
+MOVE 4 10
+555
+600
+Standard Output Stream:
+MOVE 16 11
+556
+600
+Standard Output Stream:
+MOVE 4 13 2
+558
+600
+Standard Output Stream:
+MOVE 4 8
+559
+600
+Standard Output Stream:
+MOVE 19 13
+560
+600
+Standard Output Stream:
+MOVE 7 11 2
+562
+600
+Standard Output Stream:
+MOVE 7 12
+563
+600
+Standard Output Stream:
+MOVE 17 17
+564
+600
+Standard Output Stream:
+MOVE 4 13 2
+566
+600
+Standard Output Stream:
+MOVE 7 12
+567
+600
+Standard Output Stream:
+MOVE 16 11
+568
+600
+Standard Output Stream:
+MOVE 7 11 2
+570
+600
+Standard Output Stream:
+MOVE 4 10
+571
+600
+Standard Output Stream:
+MOVE 16 11
+572
+600
+Standard Output Stream:
+MOVE 4 13 2
+574
+600
+Standard Output Stream:
+MOVE 4 8
+575
+600
+Standard Output Stream:
+MOVE 19 13
+576
+600
+Standard Output Stream:
+MOVE 7 11 2
+578
+600
+Standard Output Stream:
+MOVE 7 12
+579
+600
+Standard Output Stream:
+MOVE 17 17
+580
+600
+Standard Output Stream:
+MOVE 4 13 2
+582
+600
+Standard Output Stream:
+MOVE 7 12
+583
+600
+Standard Output Stream:
+MOVE 14 12
+584
+600
+Standard Output Stream:
+MOVE 7 11 2
+586
+600
+Standard Output Stream:
+MOVE 4 10
+587
+600
+Standard Output Stream:
+MOVE 14 12
+588
+600
+Standard Output Stream:
+MOVE 4 13 2
+590
+600
+Standard Output Stream:
+MOVE 4 8
+591
+600
+Standard Output Stream:
+MOVE 14 12
+592
+600
+Standard Output Stream:
+MOVE 7 11 2
+594
+600
+Standard Output Stream:
+MOVE 7 12
+595
+600
+Standard Output Stream:
+MOVE 14 12
+596
+600
+Standard Output Stream:
+MOVE 4 13 2
+598
+600
+Standard Output Stream:
+MOVE 7 12
+599
+600
+Standard Output Stream:
+MOVE 16 11
+600
+600
